@@ -3,3 +3,19 @@
     background-color:black;
 
 }
+
+
+#calender{
+    font-size: 0.5em;
+    
+    
+}
+.sidenav{
+    margin-top: 20%;
+}
+#rounded{
+    background-color: rgb(252, 252, 252);
+    height: 50px;
+    border-radius: 25px;
+    margin-top: 150px;
+}
