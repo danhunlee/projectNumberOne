@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Test Flight Info</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Test flight info</h1>
+
+        <form id="flight-form">
+            <label for="flight-input">Search for a flight</label><br>
+            <label for="flight-input">From where?</label>
+            <input type="text" id="flight-input1">
+            <label for="flight-input">To</label>
+            <input type="text" id="flight-input2"><br>
+
+            <label for="flight-input">From when?</label>
+            <input type="text" id="flight-dateInput1">
+            <label for="flight-input">To</label>
+            <input type="text" id="flight-dateInput2"><br>
+
+            <!-- This button will trigger our AJAX call -->
+            <input id="find-flight" type="submit" value="flight Search">
+        </form>
+
+        <!-- We'll be dumping our JSON contents in here -->
+<div id="flight-view"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="../FlightInfo/testFlightInfo.js"></script>
+
+</body>
+</html>
