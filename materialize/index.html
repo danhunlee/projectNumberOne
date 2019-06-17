@@ -7,10 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
      <!--ThingsToDostyle-->
      <link rel="stylesheet" href="ThingsToDoStyle.css">
-     <!--font awesom cdn-->
-     <script src="https://kit.fontawesome.com/d9f55774e6.js"></script>
-    
-     
+    <!--JQUERY LINK-->
     <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -23,28 +20,13 @@
      
   <nav>
     <div class="nav-wrapper white black-text">
-      <a href="#!" class="brand-logo left black-text">Backpacker
+      <a href="#!" class="brand-logo center black-text">Backpacker
         <img src="img/travel-logo-design.jpg">
       </a>
-      
-   
-    
       <ul class="right hide-on-med-and-down black-text" id="nav_content">
-        <li ><a href="transportation.html">Transportation</a></li>
+        <li ><a href="#">Transportation</a></li>
         <li><a href="#">Hotel</a></li>
         <li class="active black-text"><a href="ThingsToDo.html">Things to Do</a></li>
-
-        <li>    
-          
-              
-                 <div class="input-field col s6 s12 red-text right"  id="topbarsearch" style="margin-left: 150px">
-                   <i class="red-text material-icons prefix">search</i>
-                   <input type="text" placeholder="search" id="autocomplete-input" class="autocomplete red-text" >
-                   </div>
-                 
-                        
-         </li>         
-        
       </ul>
     </div>
   </nav>
@@ -56,13 +38,12 @@
         <div class="caption center-align black-text " id="calender">
             
            <!--date picker-->
-           <div class="row" >
+           <div class="row">
             <!--Things to do in location-->
             <div class="col s12 m12 l12">
-              <div class="rounded" id="rounded" style="font-size: 30px">Things  To Do in ..
-                <i class="material-icons left" style="margin-top: 20px;margin-left: 30px;">place</i>
+              <div class="rounded" id="rounded">Things to do in newyork
                 <a class="waves-effect waves-light btn right" id="Find-attractions" style="height: 50px;  border-top-right-radius: 25px;
-                border-bottom-right-radius: 25px;width: 80px">Search</a>
+                border-bottom-right-radius: 25px;width: 80px">button</a>
               </div>
             </div>
             
@@ -97,15 +78,15 @@
     </ul>
   </div>
 
-<!--second navbar-->
 
-  <nav id="navbar2">
+
+  <nav>
     <div class="nav-wrapper cyan black-text" id="navbar2">
       
       <ul class="center hide-on-med-and-down black-text" id="nav_content">
-        <li ><a class="waves-effect waves-light btn black" id="activity-btn">Activities</a></li>
-        <li><a class="waves-effect waves-light btn black" id="food-btn">Food Variety</a></li>
-        <li><a class="waves-effect waves-light btn black" id="Things-to-do-btn">Things To Do</a></li>
+        <li ><a href="#">Sight seeing/Activities</a></li>
+        <li><a href="#">Food Varities</a></li>
+        <li class="active black-text"><a href="ThingsToDo.html">Things to Do</a></li>
       </ul>
     </div>
   </nav>
@@ -140,7 +121,7 @@
               <!--when click + symbol ,get small description of place-->
                   <div class="card-reveal">
                       <span class="card-title">California golden cave<i class="right">X</i></span>
-                      <p id="card details">third wonder of world</p>
+                      <p>third wonder of world</p>
                   </div>
     
                   <div class="card-action">
@@ -173,7 +154,7 @@
               
               <span class="card-title">California golden cave<i class="right">X</i></span>
            
-              <p id="card details">third wonder of world</p>
+              <p>third wonder of world</p>
           </div>
 
           <div class="card-action">
@@ -210,7 +191,7 @@
               
                   <span class="card-title">California golden cave<i class="right">X</i></span>
              
-                  <p id="card details">third wonder of world</p>
+                  <p>third wonder of world</p>
             </div>
   
             <div class="card-action">
@@ -251,7 +232,7 @@
                
                    <span class="card-title">California golden cave<i class="right">X</i></span>
               
-                   <p id="card details">third wonder of world</p>
+                   <p>third wonder of world</p>
              </div>
    
              <div class="card-action">
@@ -289,7 +270,7 @@
                
                    <span class="card-title">California golden cave<i class="right">X</i></span>
               
-                   <p id="card details">third wonder of world</p>
+                   <p>third wonder of world</p>
              </div>
    
              <div class="card-action">
@@ -326,7 +307,7 @@
                
                    <span class="card-title">California golden cave<i class="right">X</i></span>
               
-                   <p id="card details">third wonder of world</p>
+                   <p>third wonder of world</p>
              </div>
    
              <div class="card-action">
@@ -339,10 +320,30 @@
 
 </div>
 
+
+          
+ 
+
+       
+    
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
     <!--JavaScript at end of body for optimized loading-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script>
-  //slider 
+   
   $(document).ready(function(){
     $('.slider').slider();
   });

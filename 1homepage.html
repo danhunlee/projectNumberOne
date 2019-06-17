@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!--Font Awesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt">
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="ThingsToDoStyle.css">
+  <!--JQUERY LINK-->
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <title>Backpacker</title>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body id="home" class="scrollspy">
+        <nav>
+                <div class="nav-wrapper white black-text">
+                  <a href="#!" class="brand-logo center black-text">Backpacker
+                    <img src="img/travel-logo-design.jpg">
+                  </a>
+                  <ul class="right hide-on-med-and-down black-text" id="nav_content">
+                    <li ><a href="#">Transportation</a></li>
+                    <li><a href="#">Hotel</a></li>
+                    <li class="active black-text"><a href="ThingsToDo.html">Things to Do</a></li>
+                  </ul>
+                </div>
+              </nav>
+
+
+  <!--Section: Slider-->
+
+
+ 
+ <!--slider-->
+ <div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="img/travel9.jpg"> <!-- random image -->
+        <div class="caption center-align black-text " id="calender">
+            
+           <!--date picker-->
+           <div class="row" >
+            <!--Things to do in location-->
+            <div class="col s12 m12 l12">
+              <div class="rounded" id="rounded" style="font-size: 30px">EXPLORE
+                <i class="material-icons left" style="margin-top: 20px;margin-left: 30px;">place</i>
+                <a class="waves-effect waves-light btn right" id="Find-attractions" style="height: 50px;  border-top-right-radius: 25px;
+                border-bottom-right-radius: 25px;width: 80px">Search</a>
+              </div>
+            </div>
+            
+          </div>
+          
+              
+              
+          <h5 class="light grey-text text-lighten-3">THE WORLD</h5>.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="img/travel10.jpeg"> <!-- random image -->
+        <div class="caption right-align">
+          <h3>Take time...</h3>
+          <h5 class="light grey-text text-lighten-3">to travel.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="img/travel11.jpeg"> <!-- random image -->
+        <div class="caption right-align">
+          <h3>You don't need an excuse</h3>
+          <h5 class="light grey-text text-lighten-3">the world awaits.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="img/travel12.jpeg"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>I HAVE NOTHING TO SAY!</h3>
+          <h5 class="light grey-text text-lighten-3">And no one asked.</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  
+
+  <!--Section: Search-->
+  <section id="search" class="section section-search teal darken-1 white-text center scrollspy">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h6>From:</h6>
+          <div class="input-field">
+            <input type="text" class="white grey-text autocomplete" id="autocomplete-input" placeholder="Aruba, Cancun, etc...">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="search" class="section section-search teal darken-1 white-text center scrollspy">
+        <div class="container">
+          <div class="row">
+            <div class="col s12">
+              <h6>To:</h6>
+              <div class="input-field">
+                <input type="text" class="white grey-text autocomplete" id="autocomplete-input" placeholder="Aruba, Cancun, etc...">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+  <!--Section: Icon Boxes-->
+  <section class="section section-icons grey lighten-4 center">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m4"> <!--entire screen when on mobile, but 4 columns on medium size and above-->
+          <div class="card-panel">
+            <i class="material-icons large teal-text">room</i>
+            <h4>Attractions</h4>
+            <p>See stuff!</p>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card-panel">
+            <i class="material-icons large teal-text">store</i>
+            <h4>Hotels</h4>
+            <p>Stay at a place!</p>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card-panel">
+            <i class="material-icons large teal-text">airplanemode_active</i>
+            <h4>Transporation</h4>
+            <p>Get there!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Section: Popular Places-->
+  <section id="popular" class="secion section-popular scrollspy">
+    <div class="container">
+      <div class="row">
+        <h4 class="center">
+          <span class="teal-text">Popular</span> Places</h4>
+        <div class="col s12 m4"> <!--entire screen when on mobile, but 4 columns on medium size and above-->
+          <div class="card">
+            <div class="card-image">
+              <img src="https://image.ibb.co/hbEMux/resort1.jpg" alt="">
+              <span class="card-title">Cancun, Mexico</span>
+            </div>
+            <div class="card-content">Popular getaway for spring break trips. Come take a dip in our tranquil waters and snorkle to see the fast disappearing coral. Don't forget to live it up with our legendary nightlife and restaurants!
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4"> <!--entire screen when on mobile, but 4 columns on medium size and above-->
+          <div class="card">
+            <div class="card-image">
+              <img src="https://image.ibb.co/mn1egc/resort2.jpg" alt="">
+              <span class="card-title">The Bahamas</span>
+            </div>
+            <div class="card-content">Visit for amazing sunsets, corals before they are gone and experience the amazing nightlife, food music and more!
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4"> <!--entire screen when on mobile, but 4 columns on medium size and above-->
+          <div class="card">
+            <div class="card-image">
+              <img src="https://image.ibb.co/mbCVnH/resort3.jpg" alt="">
+              <span class="card-title">California</span>
+            </div>
+            <div class="card-content">Visit cliff-lined beaches, redwood forest, the Sierra Nevada Mountains, Central Valley farmland, the Mojave Desert and, of course, Hollywood!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Section: Follow-->
+  <section class="section section-follow teal darken-2 white-text center">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h4>Follow Backpacker</h4>
+          <p>Follow us on social media for special offers</p>
+          <a href="#" class="white-text">
+            <i class="fab fa-facebook fa-4x"></i>
+          </a>
+          <a href="#" class="white-text">
+            <i class="fab fa-twitter fa-4x"></i>
+          </a>
+          <a href="#" class="white-text">
+            <i class="fab fa-linkedin fa-4x"></i>
+          </a>
+          <a href="#" class="white-text">
+            <i class="fas fa-envelope fa-4x"></i>
+          </a>
+          <a href="#" class="white-text">
+            <i class="fab fa-github fa-4x"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Section: Gallery-->
+  <section id="gallery" class="section section-gallery scrollspy">
+    <div class="container">
+      <h4 class="center">
+        <span class="teal-text">Photo</span> Gallery
+      </h4>
+      <div class="row">
+        <div class="col s12 m3">
+          <img src="https://source.unsplash.com/1600x900/?beach" alt="" class="materialboxed responsive-img">
+        </div>
+        <div class="col s12 m3">
+          <img src="https://source.unsplash.com/1600x900/?travel" alt="" class="materialboxed responsive-img">
+        </div>
+        <div class="col s12 m3">
+          <img src="https://source.unsplash.com/1600x900/?nature" alt="" class="materialboxed responsive-img">
+        </div>
+        <div class="col s12 m3">
+          <img src="https://source.unsplash.com/1600x900/?beach, travel" alt="" class="materialboxed responsive-img">
+        </div>
+        <div class="col s12 m3">
+          <img src="https://source.unsplash.com/1600x900/?beaches" alt="" class="materialboxed responsive-img">
+        </div>
+        <div class="col s12 m3">
+          <img src="https://source.unsplash.com/1600x900/?traveling" alt="" class="materialboxed responsive-img">
+        </div>
+        <div class="col s12 m3">
+          <img src="https://source.unsplash.com/1600x900/?bridge" alt="" class="materialboxed responsive-img">
+        </div>
+        <div class="col s12 m3">
+          <img src="https://source.unsplash.com/1600x900/?boat, travel" alt="" class="materialboxed responsive-img">
+        </div>
+        <div class="col s12 m3">
+          <img src="https://source.unsplash.com/1600x900/?water" alt="" class="materialboxed responsive-img">
+        </div>
+        <div class="col s12 m3">
+          <img src="https://source.unsplash.com/1600x900/?building" alt="" class="materialboxed responsive-img">
+        </div>
+        <div class="col s12 m3">
+          <img src="https://source.unsplash.com/1600x900/?trees" alt="" class="materialboxed responsive-img">
+        </div>
+        <div class="col s12 m3">
+          <img src="https://source.unsplash.com/1600x900/?cruise" alt="" class="materialboxed responsive-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Section: Contact-->
+  <section id="contact" class="section section-contact scrollspy">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m6">
+
+          <ul class="collection with-header">
+            <li class="collection-header">
+              <h4>Location</h4>
+            </li>
+            <li class="collection-item">Backpacker</li></li>
+            <li class="collection-item">2445 140th ave NE</li>
+            <li class="collection-item">Bellevue, WA</li>
+
+          </ul>
+        </div>
+     
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Section: Footer-->
+  <footer class="section teal darken-2 white-text center">
+    <p class="flow-text">Backpacker &copy 2019</p>
+  </footer>
+
+  <!--JavaScript at end of body for optimized loading-->
+ <!-- Compiled and minified JavaScript -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+  
+ <script>
+    //slider 
+    $(document).ready(function(){
+      $('.slider').slider();
+    });
+      </script>  
+
+</body>
+
+</html>

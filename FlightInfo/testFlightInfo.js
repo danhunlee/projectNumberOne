@@ -16,6 +16,10 @@ $("#find-flight").on("click", function (event) {
             headers: {'X-RapidAPI-Key': "38fac222b8msh31da82ee45df637p1e6440jsn2276206f519d",
             },
             }).then(function (response) {
-                $("#flight-view").text(JSON.stringify(response));
+                console.log(response);
+                $(".Depart").text("Depart: " + flightDateFrom);
+                $(".Return").text("Return: " + flightDateTo);
+                $(".minPrice").text("Min Price: $" + response.Quotes[0].MinPrice);
+
             });
 });
