@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
      <!--ThingsToDostyle-->
      <link rel="stylesheet" href="ThingsToDoStyle.css">
-    <!--JQUERY LINK-->
+     <!--font awesom cdn-->
+     <script src="https://kit.fontawesome.com/d9f55774e6.js"></script>
+    
+     
     <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -20,13 +23,28 @@
      
   <nav>
     <div class="nav-wrapper white black-text">
-      <a href="#!" class="brand-logo center black-text">Backpacker
+      <a href="#!" class="brand-logo left black-text">Backpacker
         <img src="img/travel-logo-design.jpg">
       </a>
+      
+   
+    
       <ul class="right hide-on-med-and-down black-text" id="nav_content">
-        <li ><a href="#">Transportation</a></li>
+        <li ><a href="transportation.html">Transportation</a></li>
         <li><a href="#">Hotel</a></li>
         <li class="active black-text"><a href="ThingsToDo.html">Things to Do</a></li>
+
+        <li>    
+          
+              
+                 <div class="input-field col s6 s12 red-text right"  id="topbarsearch" style="margin-left: 150px">
+                   <i class="red-text material-icons prefix">search</i>
+                   <input type="text" placeholder="search" id="autocomplete-input" class="autocomplete red-text" >
+                   </div>
+                 
+                        
+         </li>         
+        
       </ul>
     </div>
   </nav>
@@ -79,15 +97,15 @@
     </ul>
   </div>
 
+<!--second navbar-->
 
-
-  <nav>
+  <nav id="navbar2">
     <div class="nav-wrapper cyan black-text" id="navbar2">
       
       <ul class="center hide-on-med-and-down black-text" id="nav_content">
-        <li ><a href="#">Sight seeing/Activities</a></li>
-        <li><a href="#">Food Varities</a></li>
-        <li class="active black-text"><a href="ThingsToDo.html">Things to Do</a></li>
+        <li ><a class="waves-effect waves-light btn black" id="activity-btn">Activities</a></li>
+        <li><a class="waves-effect waves-light btn black" id="food-btn">Food Variety</a></li>
+        <li><a class="waves-effect waves-light btn black" id="Things-to-do-btn">Things To Do</a></li>
       </ul>
     </div>
   </nav>
