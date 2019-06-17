@@ -8,103 +8,97 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <!--Font Awesome-->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt">
     crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="ThingsToDoStyle.css">
+  <!--JQUERY LINK-->
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
   <title>Backpacker</title>
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body id="home" class="scrollspy">
-  <!--Navbar-->
-  <div class="navbar-fixed">
-    <nav class="<i class="fa fa-bell-slash" aria-hidden="true"></i>">
-      <div class="container">
-        <div class="wrapper">
-          <a href="#" class="brand-logo">Backpacker</a>
-          <a href="#" data-target="mobile-nav" class="sidenav-trigger">
-            <i class="material-icons">menu</i> <!--hamburger menu-->
-          </a>
-          <ul class="right hide-on-med-and-down"> <!--hide this menu when screen is medium or lower-->
-            <li>
-              <a href="#home">Home</a>
-            </li>
-            <li>
-              <a href="#search">Search</a>
-            </li>
-            <li>
-              <a href="#popular">Popular Places</a>
-            </li>
-            <li>
-              <a href="#gallery">Gallery</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </div>
-
-  <!--Mobile Navbar-->
-  <ul class="sidenav" id="mobile-nav">
-    <li>
-      <a href="#home">Home</a>
-    </li>
-    <li>
-      <a href="#search">Transportation</a>
-    </li>
-    <li>
-      <a href="#popular">Lodging</a>
-    </li>
-    <li>
-      <a href="#gallery">Popular Places</a>
-    </li>
-    <li>
-      <a href="#contact">Contact</a>
-    </li>
-  </ul>
-  <ul class="slides">
-      <li>
-          <img src=https://lorempixel.com/580/250/nature/1">
-          <div class="caption center-align">
-              <h3>Backpacker</h3>
-              <h5 class="light grey-text-lighten-3">Travel with us!</h5>
-          </div>
-      </li>
-  </ul>
-
+        <nav>
+                <div class="nav-wrapper white black-text">
+                  <a href="#!" class="brand-logo center black-text">Backpacker
+                    <img src="img/travel-logo-design.jpg">
+                  </a>
+                  <ul class="right hide-on-med-and-down black-text" id="nav_content">
+                    <li ><a href="#">Transportation</a></li>
+                    <li><a href="#">Hotel</a></li>
+                    <li class="active black-text"><a href="ThingsToDo.html">Things to Do</a></li>
+                  </ul>
+                </div>
+              </nav>
 
 
   <!--Section: Slider-->
-  <section class="slider">
+
+
+ 
+ <!--slider-->
+ <div class="slider">
     <ul class="slides">
       <li>
-        <img src="https://image.ibb.co/hbEMux/resort1.jpg" alt=""> <!-- random image -->
-        <div class="caption center-align">
-          <h2>Take Your Dream Vacation</h2>
-          <h5 class="light grey-text text-lighten-3 hide-on-small-only">You can too!</h5>
+        <img src="img/travel9.jpg"> <!-- random image -->
+        <div class="caption center-align black-text " id="calender">
+            
+           <!--date picker-->
+           <div class="row" >
+            <!--Things to do in location-->
+            <div class="col s12 m12 l12">
+              <div class="rounded" id="rounded" style="font-size: 30px">Things  To Do in ..
+                <i class="material-icons left" style="margin-top: 20px;margin-left: 30px;">place</i>
+                <a class="waves-effect waves-light btn right" id="Find-attractions" style="height: 50px;  border-top-right-radius: 25px;
+                border-bottom-right-radius: 25px;width: 80px">Search</a>
+              </div>
+            </div>
+            
+          </div>
+          
+              
+              
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
         </div>
       </li>
       <li>
-        <img src="https://image.ibb.co/mn1egc/resort2.jpg" alt=""> <!-- random image -->
-        <div class="caption left-align">
-          <h2>We Work With All Budgets</h2>
-          <h5 class="light grey-text text-lighten-3 hide-on-small-only">Charge that card!</h5>
-        </div>
-      </li>
-      <li>
-        <img src="https://image.ibb.co/mbCVnH/resort3.jpg" alt=""> <!-- random image -->
+        <img src="img/travel10.jpeg"> <!-- random image -->
         <div class="caption right-align">
-          <h2>Group & Individual Getaways</h2>
-          <h5 class="light grey-text text-lighten-3 hide-on-small-only">Perfect or both individual and group trips.</h5>
+          <h3>Take time...</h3>
+          <h5 class="light grey-text text-lighten-3">to travel.</h5>
         </div>
       </li>
       <li>
+        <img src="img/tourist_spot1.jpeg"> <!-- random image -->
+        <div class="caption right-align">
+          <h3>You don't need an excuse</h3>
+          <h5 class="light grey-text text-lighten-3">the world awaits.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="img/tourist_spot2.jpeg"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
     </ul>
-  </section>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  
 
   <!--Section: Search-->
   <section id="search" class="section section-search teal darken-1 white-text center scrollspy">
@@ -285,7 +279,7 @@
             <li class="collection-header">
               <h4>Location</h4>
             </li>
-            <li class="collection-item"?Backpacker</li></li>
+            <li class="collection-item">Backpacker</li></li>
             <li class="collection-item">2445 140th ave NE</li>
             <li class="collection-item">Bellevue, WA</li>
 
@@ -307,11 +301,13 @@
  <!-- Compiled and minified JavaScript -->
  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
             
-  <script type="text/javascript" src="script.js"></script>
-  <script>
-  // sidenav
-  const sideNav = document.querySelector('.sidenav');
-  M.Sidenav.init(sideNav), ());
+  
+ <script>
+    //slider 
+    $(document).ready(function(){
+      $('.slider').slider();
+    });
+      </script>  
 
 </body>
 
