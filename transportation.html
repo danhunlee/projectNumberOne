@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--font awesom cdn-->
+  <script src="https://kit.fontawesome.com/d9f55774e6.js"></script>
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!--ThingsToDo,transportation style-->
+  <link rel="stylesheet" href="ThingsToDoStyle.css">
+  <!--JQUERY LINK-->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav-wrapper white black-text">
+      <a href="#!" class="brand-logo center black-text">Backpacker
+        <img src="img/travel-logo-design.jpg">
+      </a>
+      <ul class="right hide-on-med-and-down black-text" id="nav_content">
+        <li><a href="#">Transportation</a></li>
+        <li><a href="#">Hotel</a></li>
+        <li class="active black-text"><a href="ThingsToDo.html">Things to Do</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!--background image -->
+  <div class="parallax-container">
+    <!--flight infobox-->
+    <div class="container black center " id="flight-check">
+
+      <!--nav for small box-->
+
+      <nav>
+        <div class="nav-wrapper  deep-orange accent-3">
+          <a href="#" class="brand-logo center ">Find The Best Flight </a>
+
+          <!--find flight BUTTON-->
+               <!-- This button will trigger our AJAX call -->
+               <input class="waves-effect waves-light btn teal right" id="find-flight" type="submit" value="flight Search">
+
+
+        </div>
+      </nav>
+
+      <!--input transportation details-->
+      <div class="row">
+        <div class="col s6">
+          <div class="row light-green darken-3" id="travel-info-input-row">
+            <div class="input-field col s5">
+              <!--input FROM:-->
+              <input type="text" id="flight-input1" class="autocomplete">
+
+              <label for="autocomplete-input" class="black-text">From :
+                <i class="material-icons left black-text">place</i>
+              </label>
+            </div>
+            <div class="input-field col s5">
+              <!--input TO::-->
+              <input type="text" id="flight-input2" class="autocomplete">
+              <label for="autocomplete-input" class="black-text">To :
+                <i class="material-icons left black-text">place</i>
+              </label>
+            </div>
+          </div>
+        </div>
+        
+        <!--calendar-->
+        <div class="col s6">
+          <div class="row light-green darken-3" id="Depart-info-input-row">
+            <div class=" input-field col s5 black-text ">
+              
+              <label for="autocomplete-input"  class="left black-text">Depart :
+                <i class="far fa-calendar-alt"></i>
+                <i class="fas fa-plane-departure "></i>
+              </label>
+              <!--input Depart::-->
+              <input type="text" id="flight-dateInput1" class="datepicker">
+            </div>
+            
+            <div class=" input-field col s5 black-text ">
+              <label for="autocomplete-input"  class="left black-text">Return :
+                <i class="far fa-calendar-alt"></i>
+                <i class="fas fa-plane-arrival"></i>
+              </label>
+              <!--input Return::-->
+              <input type="text" id="flight-dateInput2" class="datepicker">
+            </div>
+            
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col s6 light-green darken-3 " style="margin-left: 20px; ">
+            <!--drop down to know persons,economy/bussiness class-->
+            
+            <div class="input-field col s12  ">
+              <select class=>
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">Economy</option>
+                <option value="2">Premium Economy</option>
+                <option value="3">Business Class</option>
+                <option value="3">First Class</option>
+              </select>
+              <label class="black text">Choose class
+                
+                <i class="fas fa-plane"></i>
+              </label>
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        >
+        
+        <div class="parallax"><img src="img/travel7.jpeg">
+          
+          
+          
+          <!--flight info in cards-->
+          
+        </div>
+      </div>
+    </div>
+    <h3 class="center red-text">Find Great Deals!!!!!!!</h3>
+    <div class="row">
+      
+      <div class="col l12 m6 s12">
+        <div class="card">
+          <!-- <div class="card-content" id="flight-description"> -->
+              <!-- <div id="flight-view"></div> -->
+              <div class="Depart"></div>
+              <div class="Return"></div>
+              <div class="minPrice"></div>
+
+
+            
+         
+        </div>
+      </div>
+    </div>
+    <div class="col l6 m6 s12">
+      <div class="card">
+        <div class="card-content" id="flight-description">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati ullam minima exercitationem explicabo,
+          voluptatem officia a ipsum repudiandae assumenda eos?
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+
+    <div class="col l6 m6 s12">
+      <div class="card">
+        <div class="card-content" id="flight-description">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati ullam minima exercitationem explicabo,
+          voluptatem officia a ipsum repudiandae assumenda eos?
+        </div>
+      </div>
+    </div>
+    <div class="col l6 m6 s12">
+      <div class="card">
+        <div class="card-content" id="flight-description">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati ullam minima exercitationem explicabo,
+          voluptatem officia a ipsum repudiandae assumenda eos?
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+
+    <div class="col l6 m6 s12">
+      <div class="card">
+        <div class="card-content" id="flight-description">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati ullam minima exercitationem explicabo,
+          voluptatem officia a ipsum repudiandae assumenda eos?
+        </div>
+      </div>
+    </div>
+    <div class="col l6 m6 s12">
+      <div class="card">
+        <div class="card-content" id="flight-description">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati ullam minima exercitationem explicabo,
+          voluptatem officia a ipsum repudiandae assumenda eos?
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="../projectNumberOne/FlightInfo/testFlightInfo.js"></script>
+  <script>
+    //background image initialize
+
+    var elems = document.querySelector('.parallax');
+    var instances = M.Parallax.init(elems, {});
+
+    //auto complete form
+    var form = document.querySelectorAll('.autocomplete');
+    var instances = M.Autocomplete.init(form, {
+      data: {
+        " Alaska": null,
+        "Arizona": null,
+        "California": null,
+        "Colorado": null,
+        "Florida": null,
+        "Georgia": null,
+        "Idaho": null,
+        "Minnesota": null,
+        "Michigan": null,
+        "Virginia": null,
+        "Texas": null,
+        "Wyoming": null,
+        " Washington": null,
+        "Kentucky": null,
+        "New York": null,
+      },
+      limit: 5
+
+
+
+
+    });
+    //date picker
+
+    // document.addEventListener('DOMContentLoaded', function () {
+    //   var calendar = document.querySelectorAll('.datepicker');
+    //   var instances = M.Datepicker.init(calendar, {
+
+    //     showClearBtn: true,
+    //     selectMonths: true
+
+    //   });
+
+
+      //drop down 
+      var elems = document.querySelectorAll('select');
+      var instances = M.FormSelect.init(elems, {});
+    // });
+  </script>
+</body>
