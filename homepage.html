@@ -4,7 +4,7 @@
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="./materialize/css/materialize.css"  media="screen,projection"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
@@ -17,6 +17,81 @@
     </head>
 
     <body>
+        <nav>
+            <div class="nav-wrapper white black-text">
+              <a href="#!" class="brand-logo center black-text">Backpacker
+                <img src="img/travel-logo-design.jpg">
+              </a>
+              <ul class="right hide-on-med-and-down black-text" id="nav_content">
+                <li ><a href="#">Transportation</a></li>
+                <li><a href="#">Hotel</a></li>
+                <li class="active black-text"><a href="ThingsToDo.html">Things to Do</a></li>
+              </ul>
+            </div>
+          </nav>
+<!--slider-->
+<div class="slider"> nb
+    <ul class="slides">
+      <li>
+        <img src="img/tourist_spot3.jpeg"> <!-- random image -->
+        <div class="caption center-align black-text " id="calender">
+            
+           <!--date picker-->
+           <div class="row">
+            <!--Things to do in location-->
+            <div class="col s12 m12 l12">
+              <div class="rounded" id="rounded">Things to do in newyork
+                <a class="waves-effect waves-light btn right" id="Find-attractions" style="height: 50px;  border-top-right-radius: 25px;
+                border-bottom-right-radius: 25px;width: 80px">Submit</a>
+              </div>
+            </div>
+            
+          </div>
+          
+                   
+              
+              
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="img/tourist_spot6.jpeg"> <!-- random image -->
+        <div class="caption left-align">
+          <h3>Left Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="img/tourist_spot1.jpeg"> <!-- random image -->
+        <div class="caption right-align">
+          <h3>Right Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="img/tourist_spot2.jpeg"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+
+  <nav>
+    <div class="nav-wrapper cyan black-text" id="navbar2">
+      
+      <ul class="center hide-on-med-and-down black-text" id="nav_content">
+        <li ><a href="#">Sight seeing/Activities</a></li>
+        <li><a href="#">Food Varities</a></li>
+        <li class="active black-text"><a href="ThingsToDo.html">Things to Do</a></li>
+      </ul>
+    </div>
+  </nav>
+    
+              
         <div class="row">
             <form class="col s12">
               <div class="row">
@@ -52,7 +127,27 @@
 
         console.log(fromImput, toImput)
       })
-
+      <script>
+   
+   $(document).ready(function(){
+     $('.slider').slider();
+   });
+       
+  //date picker
+  
+  const calander=document.querySelector('.datepicker');
+  M.Datepicker.init(calander,{
+   showClearBtn:true,
+   selectMonths:true
+   
+  } );
+  //when click things to do image card images,get full view of image
+  const Gallery=document.querySelectorAll('.materialboxed');
+  M.Materialbox.init(Gallery,{});
+   </script>
+ 
+ 
+ 
 
       
       </script>
