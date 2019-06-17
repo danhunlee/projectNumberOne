@@ -1,42 +1,63 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-     <!--ThingsToDostyle-->
-     <link rel="stylesheet" href="ThingsToDoStyle.css">
-    <!--JQUERY LINK-->
-    <script
-        src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-        crossorigin="anonymous"></script>
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  </head>
 
-  <body>
-     
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!--ThingsToDostyle-->
+  <link rel="stylesheet" href="ThingsToDoStyle.css">
+ 
+ 
+  <!--JQUERY LINK-->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+
+
   <nav>
     <div class="nav-wrapper white black-text">
-      <a href="#!" class="brand-logo center black-text">Backpacker
+      <a href="#!" class="brand-logo left black-text">Backpacker
         <img src="img/travel-logo-design.jpg">
       </a>
+      
+   
+    
       <ul class="right hide-on-med-and-down black-text" id="nav_content">
-        <li ><a href="#">Transportation</a></li>
+
+        <li><a href="#">Transportation</a></li>
+
         <li><a href="#">Hotel</a></li>
         <li class="active black-text"><a href="ThingsToDo.html">Things to Do</a></li>
+
+        <li>    
+          
+              
+                 <div class="input-field col s6 s12 red-text right"  id="topbarsearch" style="margin-left: 150px">
+                   <i class="red-text material-icons prefix">search</i>
+                   <input type="text" placeholder="search" id="autocomplete-input" class="autocomplete red-text" >
+                   </div>
+                 
+                        
+         </li>         
+        
       </ul>
     </div>
   </nav>
- <!--slider-->
- <div class="slider">
+  <input type="text" id="searchCity" value="city name"></input>
+  <button id="search">Search</button>
+  <!--slider-->
+  <div class="slider">
     <ul class="slides">
       <li>
         <img src="img/tourist_spot3.jpeg"> <!-- random image -->
         <div class="caption center-align black-text " id="calender">
-            
+
            <!--date picker-->
            <div class="row" >
             <!--Things to do in location-->
@@ -47,11 +68,11 @@
                 border-bottom-right-radius: 25px;width: 80px">Search</a>
               </div>
             </div>
-            
+
           </div>
-          
-              
-              
+
+
+
           <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
         </div>
       </li>
@@ -79,24 +100,26 @@
     </ul>
   </div>
 
+<!--second navbar-->
 
-
-  <nav>
+  <nav id="navbar2">
     <div class="nav-wrapper cyan black-text" id="navbar2">
-      
+
       <ul class="center hide-on-med-and-down black-text" id="nav_content">
-        <li ><a href="#">Sight seeing/Activities</a></li>
+
+        <li><a href="#">Sight seeing/Activities</a></li>
         <li><a href="#">Food Varities</a></li>
-        <li class="active black-text"><a href="ThingsToDo.html">Things to Do</a></li>
+        <li class="active black-text" ><button id="thingsToDo">Things to Do</button></li>
+
       </ul>
     </div>
   </nav>
 
 
-  
-<!--things to do places displayed as image cards-->
- <div class="container">
-   
+
+  <!--things to do places displayed as image cards-->
+  <div class="container">
+
     <div class="row">
       
         <div class="col l4 m4 s12">
@@ -128,26 +151,44 @@
                   <div class="card-action">
                         <a>visit Golden cave</a>
                   </div>
-    
+   
           </div>
-      </div>
-      <div class="col l4 m4 s12">
-        
-          <div class="card sticky-action">
-
-              <div class="card-image" id="card-image">
-            
-                  <img src="img/thingsToDo1.jpeg" width="300px" height="200px" class="materialboxed">
-                  
-                  <span class="card-title" id="image-title">Golden Cave</span>
-                 
-                  <a class="btn red btn-floating halfway-fab pulse activator ">+</a>
-              
-                </div>
 
           <div class="card-content " id="image-content">
-              
-              Golden cave california
+
+            Golden cave california
+
+          </div>
+
+          <!--when click + symbol ,get small description of place-->
+          <div class="card-reveal">
+            <span class="card-title">California golden cave<i class="right">X</i></span>
+            <p>third wonder of world</p>
+          </div>
+
+          <div class="card-action">
+            <a>visit Golden cave</a>
+          </div>
+
+        </div>
+      </div>
+      <div class="col l4 m4 s12">
+
+        <div class="card sticky-action">
+
+          <div class="card-image" id="card-image">
+
+            <img src="img/thingsToDo1.jpeg" width="300px" height="200px" class="materialboxed">
+
+            <span class="card-title" id="image-title">Golden Cave</span>
+
+            <a class="btn red btn-floating halfway-fab pulse activator ">+</a>
+
+          </div>
+
+          <div class="card-content " id="image-content">
+
+            Golden cave california
 
           </div>
           <!--when click + symbol ,get small description of place-->
@@ -159,33 +200,34 @@
           </div>
 
           <div class="card-action">
-              
+
             <a>visit Golden cave</a>
 
           </div>
 
+        </div>
       </div>
-    </div>
-    
-    <div class="col l4 m4 s12">
+
+      <div class="col l4 m4 s12">
 
         <div class="card sticky-action">
-          
-           <div class="card-image" id="card-image">
-            
-                  <img src="img/thingsToDo3.jpeg" width="300px" height="200px" class="materialboxed">
-              
-                  <span class="card-title" id="image-title">Golden Cave</span>
-              
-                  <a class="btn red btn-floating halfway-fab pulse activator ">+</a>
-            
+
+          <div class="card-image" id="card-image">
+
+            <img src="img/thingsToDo3.jpeg" width="300px" height="200px" class="materialboxed">
+
+            <span class="card-title" id="image-title">Golden Cave</span>
+
+            <a class="btn red btn-floating halfway-fab pulse activator ">+</a>
+
           </div>
-  
+
           <div class="card-content " id="image-content">
-              
-               Golden cave california
-  
+
+            Golden cave california
+
           </div>
+
             <!--when click + symbol ,get small description of place-->
             
              <div class="card-reveal">
@@ -209,7 +251,7 @@
       
       <div class="col l4 m4 s12">
 
-          
+
         <div class="card sticky-action">
           
             <div class="card-image" id="card-image">
@@ -245,9 +287,11 @@
           </div>
 
         </div>
-    
-  <div class="col l4 m4 s12">
-                 
+
+      </div>
+
+      <div class="col l4 m4 s12">
+
         <div class="card sticky-action">
           
             <div class="card-image" id="card-image">
@@ -278,15 +322,36 @@
                
                  <a>visit Golden cave</a>
              </div>
-   
+
           </div>
-  </div>
 
-  <div class="col l4 m4 s12">
+          <div class="card-content " id="image-content">
 
-                          
+            Golden cave california
+
+          </div>
+          <!--when click + symbol ,get small description of place-->
+
+          <div class="card-reveal">
+
+            <span class="card-title">California golden cave<i class="right">X</i></span>
+
+            <p>third wonder of world</p>
+          </div>
+
+          <div class="card-action">
+
+            <a>visit Golden cave</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col l4 m4 s12">
+
+
         <div class="card sticky-action">
-          
+ 
             <div class="card-image" id="card-image">
              
                    <img src="img/thingsToDo3.jpeg" width="300px" height="200px" class="materialboxed">
@@ -316,21 +381,43 @@
                  <a>visit Golden cave</a>
              </div>
    
+
           </div>
-                  </div>
 
-</div>
+          <div class="card-content " id="image-content">
+
+            Golden cave california
+
+          </div>
+          <!--when click + symbol ,get small description of place-->
+
+          <div class="card-reveal">
+
+            <span class="card-title">California golden cave<i class="right">X</i></span>
+
+            <p>third wonder of world</p>
+          </div>
+
+          <div class="card-action">
+
+            <a>visit Golden cave</a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
 
 
-          
- 
-
-       
-    
 
 
 
- 
+
+
+
+
+
+
 
 
 
@@ -343,6 +430,7 @@
 
     <!--JavaScript at end of body for optimized loading-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
   <script>
   //slider 
   $(document).ready(function(){
@@ -362,7 +450,19 @@
  M.Materialbox.init(Gallery,{});
   </script>
 
+      const calander = document.querySelector('.datepicker');
+      M.Datepicker.init(calander, {
+        showClearBtn: true,
+        selectMonths: true
+
+      });
+      //when click things to do image card images,get full view of image
+      const Gallery = document.querySelectorAll('.materialboxed');
+      M.Materialbox.init(Gallery, {});
+    </script>
 
 
+<script src="assets/javascript/script.js"></script>
 </body>
+
 </html>
