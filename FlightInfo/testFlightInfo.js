@@ -6,10 +6,12 @@ $("#find-flight").on("click", function (event) {
     var flightTo = $("#flight-input2").val();
     var flightDateFrom = $("#flight-dateInput1").val();
     var flightDateTo = $("#flight-dateInput2").val();
+    var cabinClass = $("#cabin-input").val();
+    // console.log(cabinClass);
 
-
-        var queryURL ="https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/" +
-                        flightFrom + "-sky/" + flightTo + "-sky/"+flightDateFrom+"?inboundpartialdate="+flightDateTo+"";
+        var queryURL ="https://apidojo-kayak-v1.p.rapidapi.com/flights/create-session?origin1="+flightFrom+"&destination1="+flightTo+"&departdate1="+flightDateFrom+"&cabin="+cabinClass+"&currency=USD&adults=1&bags=0";
+        
+        
         $.ajax({
             url: queryURL,                    
             method: "GET",
@@ -17,9 +19,14 @@ $("#find-flight").on("click", function (event) {
             },
             }).then(function (response) {
                 console.log(response);
-                $(".Depart").text("Depart: " + flightDateFrom);
-                $(".Return").text("Return: " + flightDateTo);
-                $(".minPrice").text("Min Price: $" + response.Quotes[0].MinPrice);
+                $(".Depart").text("Depart: " + flightFrom + " " + flightDateFrom);
+                $(".Return").text("Return: "+ flightTo + " " + flightDateTo);
+                // $(".cheapestAirline").text("Airline: " + response.tripset[0].cheapestProviderName);
+                $(".cheapestPrice").text("Cheapest Price: $" + response.cheapestPrice);
+                $(".logos").text(JSON.stringify(response.airlineLogos.AA));
+                $(".trip1").text("Trip 1: "+ response.tripset[0].cheapestProviderName + " " + response.tripset[0].displayLow);
+                $(".trip2").text("Trip 2: "+ response.tripset[1].cheapestProviderName + " " + response.tripset[1].displayLow);
 
+                console.log(response.tripset[0]);
             });
 });
