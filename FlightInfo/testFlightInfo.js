@@ -7,6 +7,9 @@ $("#find-flight").on("click", function (event) {
     var flightDateFrom = $("#flight-dateInput1").val();
     var flightDateTo = $("#flight-dateInput2").val();
     var cabinClass = $("#cabin-input").val();
+    var alaska = attr('src',"https://www.gstatic.com/flights/airline_logos/70px/AS.png");
+
+    // var alaska= document.getElementById("https://www.gstatic.com/flights/airline_logos/70px/AS.png");
     // console.log(cabinClass);
 
         var queryURL ="https://apidojo-kayak-v1.p.rapidapi.com/flights/create-session?origin1="+flightFrom+"&destination1="+flightTo+"&departdate1="+flightDateFrom+"&cabin="+cabinClass+"&currency=USD&adults=1&bags=0";
@@ -23,8 +26,8 @@ $("#find-flight").on("click", function (event) {
                 $(".Return").text("Return: "+ flightTo + " " + flightDateTo);
                 // $(".cheapestAirline").text("Airline: " + response.tripset[0].cheapestProviderName);
                 // $(".cheapestPrice").text("Cheapest Price: $" + response.cheapestPrice);
-                $(".logos").text(JSON.stringify(response.airlineLogos.AA));
-                $(".trip1").text("Trip 1: "+ response.tripset[0].cheapestProviderName + " " + response.tripset[0].displayLow);
+                // $(".logos").text(JSON.stringify(response.airlineLogos.AA));
+                $(".trip1").text("Trip 1: "+ alaska + response.tripset[0].cheapestProviderName + " " + response.tripset[0].displayLow);
                 $(".trip2").text("Trip 2: "+ response.tripset[1].cheapestProviderName + " " + response.tripset[1].displayLow);
                 $(".trip3").text("Trip 3: "+ response.tripset[2].cheapestProviderName + " " + response.tripset[2].displayLow);
                 $(".trip4").text("Trip 4: "+ response.tripset[3].cheapestProviderName + " " + response.tripset[3].displayLow);
