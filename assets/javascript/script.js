@@ -445,7 +445,7 @@ $('#activity-btn').on('click',function(){
 
 })
 
-$('#hotel').on('click',function(){
+/*$('#hotel').on('click',function(){
 
     
     
@@ -491,4 +491,4 @@ $('#hotel').on('click',function(){
             }
         }); 
 
-})
+})*/
