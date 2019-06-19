@@ -19,7 +19,7 @@ $('#search').on('click',function(){
         url : queryURL,
         method: "GET"
     }).then(function(response){
-        console.log(response.response.groups[0].items[0].venue);
+        console.log(response.response.groups[0].items.length);
         
         $('#image-title1').text(response.response.groups[0].items[0].venue.name);
         $('#image-title2').text(response.response.groups[0].items[1].venue.name);
