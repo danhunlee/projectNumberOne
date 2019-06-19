@@ -9,8 +9,9 @@
      <link rel="stylesheet" href="ThingsToDoStyle.css">
      <!--font awesom cdn-->
      <script src="https://kit.fontawesome.com/d9f55774e6.js"></script>
-    
+     <link rel=”stylesheet” type=”text/css” href=”star-rating-svg-master/src/css/star-rating-svg.css”>
      
+    
     <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -108,7 +109,8 @@
             <div class="col s12 m7">
                  <div class="card horizontal sticky-action" style="width: 600px">
                     <div class="card-image">
-                        <img src="img/hotel2.jpeg" style="width: 200px;height:210px">
+                        <img src="img/hotel2.jpeg" style="width: 200px;height:210px" id="img1">
+                        <span class="card-title" id="image-title1">Golden Cave</span>
                     </div>
                     <div class="card-stacked">
                         <!--card content-->
@@ -123,13 +125,9 @@
                      
                             <div class="row">
                                 <div class="col">
-                                    <h8 id="rating"> Rating</h8> 
-                                  <span class="fa fa-star checked"></span>
-                                  <span class="fa fa-star checked"></span>
-                                  <span class="fa fa-star checked"></span>
-                                  <span class="fa fa-star"></span>
-                                  <span class="fa fa-star"></span> 
-                                     
+                                    <h8 > Rating</h8> 
+                                   <div id="rating"></div>
+                                     <div class="svg-star-rating jq-stars" id="demo"></div>
                                 </div>
                            </div>
                     </div>
@@ -153,7 +151,8 @@
         
         <div class="card horizontal" style="width: 600px">
           <div class="card-image">
-            <img src="img/hotel3.jpeg" style="width: 200px;height:210px">
+            <img src="img/hotel3.jpeg" style="width: 200px;height:210px" id="img2">
+            <span class="card-title" id="image-title2">Golden Cave</span>
             
             
               
@@ -191,7 +190,8 @@
                 
                 <div class="card horizontal" style="width: 600px">
                   <div class="card-image">
-                    <img src="img/hotel1.jpeg" style="width: 200px;height:210px">
+                    <img src="img/hotel1.jpeg" style="width: 200px;height:210px" id="img3">
+                    <span class="card-title" id="image-title3">Golden Cave</span>
                     
                     
                       
@@ -229,8 +229,8 @@
     <div class="col s12 m7">
         <div class="card horizontal" style="width: 600px">
             <div class="card-image">
-                <img src="img/hotel2.jpeg" style="width: 200px;height:210px">
-                    <span class="card-title" id="image-title">Golden Cave</span>
+                <img src="img/hotel2.jpeg" style="width: 200px;height:210px" id="img4">
+                    <span class="card-title" id="image-title4">Golden Cave</span>
                     
                       
                   </div>
@@ -268,8 +268,8 @@
                 
                 <div class="card horizontal" style="width: 600px">
                   <div class="card-image">
-                    <img src="img/hotel3.jpeg" style="width: 200px;height:210px">
-                    
+                    <img src="img/hotel3.jpeg" style="width: 200px;height:210px" id="img5">
+                    <span class="card-title" id="image-title5">Golden Cave</span>
                     
                       
                   </div>
@@ -304,8 +304,8 @@
                 
                 <div class="card horizontal" style="width: 600px">
                   <div class="card-image">
-                    <img src="img/hotel5.jpeg" style="width: 200px;height:210px">
-                    
+                    <img src="img/hotel5.jpeg" style="width: 200px;height:210px" id="img6">
+                    <span class="card-title" id="image-title6">Golden Cave</span>
                     
                       
                   </div>
@@ -337,9 +337,10 @@
             </div>
   </div>
 </div>
-  
+<script src="assets/javascript/jquery.star-rating-svg.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-          
+<script src="assets/javascript/scriptHotel.js"></script>  
+
 <script>
  //slider 
  $(document).ready(function(){

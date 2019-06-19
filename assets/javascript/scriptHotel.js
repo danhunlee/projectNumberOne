@@ -37,7 +37,11 @@ $('document').ready(function(){
 
                     $("#img"+parseInt(i+1)).attr('src',item.image_url);  
                     
-                     //console.log(item);
+                     console.log(item.rating);
+
+                     $('#demo').starRating('setRating', item.rating, false);
+
+
                      // Append our result into our page
                     // $('#results').append('<div id="' + id + '" style="margin-top:50px;margin-bottom:50px;"><img src="' + image + '" style="width:200px;height:150px;"><br>We found <b>' + name + '</b> (' + alias + ')<br>Business ID: ' + id + '<br> Located at: ' + address + ' ' + city + ', ' + state + ' ' + zipcode + '<br>The phone number for this business is: ' + phone + '<br>This business has a rating of ' + rating + ' with ' + reviewcount + ' reviews.</div>');
                });
@@ -62,7 +66,7 @@ $('document').ready(function(){
              // Grab the results from the API JSON return
              var totalresults = data.total;
              // If our results are greater than 0, continue
-             console.log(data);
+             //console.log(data);
              if (totalresults > 0){
                  // Display a header on the page with the number of results
                 // $('#results').append('<h5>We discovered ' + totalresults + ' results!</h5>');
@@ -93,6 +97,8 @@ $('document').ready(function(){
              }
             }
         }); 
+
+
 
 
 })
