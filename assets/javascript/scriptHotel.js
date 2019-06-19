@@ -36,10 +36,14 @@ $('document').ready(function(){
                       console.log(("#image-title"+parseInt(i+1)));
 
                     $("#img"+parseInt(i+1)).attr('src',item.image_url);  
-                    
-                     console.log(item.rating);
+                    $('#Price'+parseInt(i+1)).text(item.price);
+                     console.log(item.location.display_address[0]+""+item.location.display_address[1]);
+                    $('#Address'+parseInt(i+1)).text(item.location.display_address[0]+""+item.location.display_address[1]);
 
-                     $('#demo').starRating('setRating', item.rating, false);
+
+                     for(var i=0;i<item.rating;i++){
+                         $("#star"+parseInt(i+1)).attr('class','checked');
+                     }
 
 
                      // Append our result into our page
