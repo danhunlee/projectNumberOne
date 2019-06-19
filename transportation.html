@@ -43,8 +43,8 @@
           <a href="#" class="brand-logo center ">Find The Best Flight </a>
 
           <!--find flight BUTTON-->
-               <!-- This button will trigger our AJAX call -->
-               <input class="waves-effect waves-light btn teal right" id="find-flight" type="submit" value="flight Search">
+          <!-- This button will trigger our AJAX call -->
+          <input class="waves-effect waves-light btn teal right" id="find-flight" type="submit" value="flight Search">
 
 
         </div>
@@ -71,7 +71,7 @@
             </div>
           </div>
         </div>
-        
+
         <!--calendar-->
         <div class="col l6 m6 s12">
           <div class="row light-green darken-3" id="Depart-info-input-row">
@@ -93,76 +93,74 @@
               <!--input Return::-->
               <input type="text" id="flight-dateInput2" class="datepicker">
             </div>
-            
-            
-            
+
+
+
           </div>
         </div>
       </div>
-      
+
       <div class="row">
-        <div class="col l5 m6 s12  light-green darken-3 " style="margin-left: 20px; ">
-            <!--drop down to know persons,economy/bussiness class-->
-            
-            <div class="input-field col l8 s12  ">
-              <select class=>
-                <option value="" disabled selected>Choose your option</option>
-                <!-- <input type="text" id="cabin-input"> -->
-                <option value="e" id="cabin-input1">Economy</option>
-                <option value="p" id="cabin-input2">Premium Economy</option>
-                <option value="b" id="cabin-input3">Business</option>
-                <option value="f" id="cabin-input4">First</option>
-              </select>
-           
-              <label class="black text" style="height:20px"> <i class="fas fa-plane"></i>Choose a class
-                
-               
-              </label>
-            </div>
-            
+        <div class="col s6 light-green darken-3 " style="margin-left: 20px; ">
+          <!--drop down to know persons,economy/bussiness class-->
+
+          <div class="input-field col s12  ">
+            <select id="cabin-class">
+              <option value="" disabled selected>Choose your option</option>
+              <!-- <input type="text" id="cabin-input"> -->
+              <option value="e">Economy</option>
+              <option value="p">Premium Economy</option>
+              <option value="b">Business</option>
+              <option value="f">First</option>
+            </select>
+            <label class="black text">Choose a class
+
+              <i class="fas fa-plane"></i>
+            </label>
+
           </div>
-          
+
         </div>
-        
-        
-        
-        <div class="parallax"><img src="img/travel7.jpeg">
-                    
-        </div>
+      </div>
+
+
+
+      <div class="parallax"><img src="img/travel7.jpeg">
+
       </div>
     </div>
+  </div>
+  <div class="row">
+    <div class="col l12 s12 m12 green">
+        
+
+      <div class="progress">
+        <div class="indeterminate"></div>
+    </div>
+    </div>
+  </div>
+  
+
+  <div id="container">
     <h3 class="center red-text">Find Great Deals!!!!!!!</h3>
     <div class="row">
-      
+
       <div class="col l12 m6 s12">
         <div class="card">
-              <div class="Depart"></div>
-              <div class="Return"></div>
-              <div class="ClassIs"></div>
+          <div class="Depart"></div>
+          <div class="Return"></div>
+          <div class="ClassIs"></div>
         </div>
       </div>
     </div>
-   
-  </div>
 
 
-  <div class="row">
-
-    <div class="col l6 m6 s12">
-      <div class="card">
-        <div class="card-content" id="flight-description">
-          <img id="img1">  
-          <div class="trip1"></div>
-          <a class="btn btn-primary" id="link1" href="" target="_blank" role="button">Select</a>
-
-        </div>
-      </div>
-    </div>
-    <div class="col l6 m6 s12">
-      <div class="card">
-        <div class="card-content" id="flight-description">
-            <img id="img2">  
   
+    <div class="col l6 m6 s12">
+      <div class="card">
+        <div class="card-content" id="flight-description">
+          <img id="img2">
+
           <div class="trip2"></div>
           <a class="btn btn-primary" id="link2" href="" target="_blank" role="button">Select</a>
 
@@ -172,13 +170,15 @@
   </div>
 
 
+
+
   <div class="row">
 
     <div class="col l6 m6 s12">
       <div class="card">
         <div class="card-content" id="flight-description">
-            <img id="img3">  
-  
+          <img id="img3">
+
           <div class="trip3"></div>
           <a class="btn btn-primary" id="link3" href="" target="_blank" role="button">Select</a>
 
@@ -188,8 +188,8 @@
     <div class="col l6 m6 s12">
       <div class="card">
         <div class="card-content" id="flight-description">
-            <img id="img4">  
-  
+          <img id="img4">
+
           <div class="trip4"></div>
           <a class="btn btn-primary" id="link4" href="" target="_blank" role="button">Select</a>
 
@@ -199,30 +199,31 @@
   </div>
   <div class="row">
 
-      <div class="col l6 m6 s12">
-        <div class="card">
-          <div class="card-content" id="flight-description">
-              <img id="img5">  
-  
-            <div class="trip5"></div>
-            <a class="btn btn-primary" id="link5" href="" target="_blank" role="button">Select</a>
+    <div class="col l6 m6 s12">
+      <div class="card">
+        <div class="card-content" id="flight-description">
+          <img id="img5">
 
-          </div>
-        </div>
-      </div>
-      <div class="col l6 m6 s12">
-        <div class="card">
-          <div class="card-content" id="flight-description">
-              <img id="img6">  
-  
-            <div class="trip6"></div>
-            <a class="btn btn-primary" id="link6" href="" target="_blank" role="button">Select</a>
+          <div class="trip5"></div>
+          <a class="btn btn-primary" id="link5" href="" target="_blank" role="button">Select</a>
 
-          </div>
         </div>
       </div>
     </div>
+    <div class="col l6 m6 s12">
+      <div class="card">
+        <div class="card-content" id="flight-description">
+          <img id="img6">
 
+          <div class="trip6"></div>
+          <a class="btn btn-primary" id="link6" href="" target="_blank" role="button">Select</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
 
 
 
@@ -296,5 +297,6 @@
       var elems = document.querySelectorAll('select');
       var instances = M.FormSelect.init(elems, {});
     });
+    
   </script>
 </body>
