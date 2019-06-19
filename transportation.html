@@ -52,7 +52,7 @@
 
       <!--input transportation details-->
       <div class="row">
-        <div class="col s6">
+        <div class="col s12 m6 l6">
           <div class="row light-green darken-3" id="travel-info-input-row">
             <div class="input-field col s5">
               <!--input FROM:-->
@@ -73,9 +73,9 @@
         </div>
         
         <!--calendar-->
-        <div class="col s6">
+        <div class="col l6 m6 s12">
           <div class="row light-green darken-3" id="Depart-info-input-row">
-            <div class=" input-field col s5 black-text ">
+            <div class=" input-field col l6 m6 s6 black-text ">
               
               <label for="autocomplete-input"  class="left black-text">Depart :
                 <i class="far fa-calendar-alt"></i>
@@ -85,7 +85,7 @@
               <input type="text" id="flight-dateInput1" class="datepicker">
             </div>
             
-            <div class=" input-field col s5 black-text ">
+            <div class=" input-field col l6 m6 s6 black-text ">
               <label for="autocomplete-input"  class="left black-text">Return :
                 <i class="far fa-calendar-alt"></i>
                 <i class="fas fa-plane-arrival"></i>
@@ -101,10 +101,10 @@
       </div>
       
       <div class="row">
-        <div class="col s6 light-green darken-3 " style="margin-left: 20px; ">
+        <div class="col l5 m6 s12  light-green darken-3 " style="margin-left: 20px; ">
             <!--drop down to know persons,economy/bussiness class-->
             
-            <div class="input-field col s12  ">
+            <div class="input-field col l8 s12  ">
               <select class=>
                 <option value="" disabled selected>Choose your option</option>
                 <!-- <input type="text" id="cabin-input"> -->
@@ -113,9 +113,10 @@
                 <option value="b" id="cabin-input3">Business</option>
                 <option value="f" id="cabin-input4">First</option>
               </select>
-              <label class="black text">Choose a class
+           
+              <label class="black text" style="height:20px"> <i class="fas fa-plane"></i>Choose a class
                 
-                <i class="fas fa-plane"></i>
+               
               </label>
             </div>
             
@@ -280,19 +281,20 @@
     });
     //date picker
 
-    // document.addEventListener('DOMContentLoaded', function () {
-    //   var calendar = document.querySelectorAll('.datepicker');
-    //   var instances = M.Datepicker.init(calendar, {
+    document.addEventListener('DOMContentLoaded', function () {
+      var calendar = document.querySelectorAll('.datepicker');
+      var instances = M.Datepicker.init(calendar, {
 
-    //     showClearBtn: true,
-    //     selectMonths: true
+        showClearBtn: true,
+        selectMonths: true,
+        format:'yyyy-mm-dd'
 
-    //   });
+      });
 
 
       //drop down 
       var elems = document.querySelectorAll('select');
       var instances = M.FormSelect.init(elems, {});
-    // });
+    });
   </script>
 </body>
