@@ -58,7 +58,7 @@ margin-right: 10px;
 
 }
 #find-flight{
-    width: 200px;
+    width: 100px;
     height: 70px;
     
      border-top-right-radius: 25px;
@@ -67,7 +67,7 @@ margin-right: 10px;
      color: black;
      text-align: center;
      font-size: 30px;
-     margin-left: 50px;
+     
 
 }
 #flight-description{
