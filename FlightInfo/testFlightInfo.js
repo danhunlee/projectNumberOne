@@ -1,9 +1,20 @@
+$('#loading').hide();
+    $(document).ajaxStart(function() {                    
+        $("#loading").show();
+        $("#container").hide();
+
+    });
+    $(document).ajaxStop(function() {
+        $("#loading").hide();
+        $("#container").show();
+
+    });
+
 $("#find-flight").on("click", function (event) {
 
     event.preventDefault();
     $(".parallax-container").show();
-    $("#container").show();
-   
+    
     var flightFrom = $("#flight-input1").val();            
     var flightTo = $("#flight-input2").val();
     var flightDateFrom = $("#flight-dateInput1").val();
@@ -22,6 +33,9 @@ $("#find-flight").on("click", function (event) {
             },
             }).then(function (response) {
                 console.log(response);
+                
+                
+
                 $(".Depart").text("Depart: " + flightFrom + " " + flightDateFrom);
                 $(".Return").text("Return: "+ flightTo + " " + flightDateTo);
                 
@@ -69,137 +83,137 @@ $("#find-flight").on("click", function (event) {
                 }
                 $("#link1").attr('href', "https://www.kayak.com/"+response.tripset[0].shareURL);
                 
-                $(".trip2").text("Trip 2: "+ response.tripset[1].cheapestProviderName + " " + response.tripset[1].displayLow);
+                $(".trip2").text("Trip 2: "+ response.tripset[10].cheapestProviderName + " " + response.tripset[10].displayLow);
 
-                if(response.tripset[1].cheapestProviderName === "Delta") {
+                if(response.tripset[10].cheapestProviderName === "Delta") {
                     $("#img2").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/DL.png")
                 }
-                else if(response.tripset[1].cheapestProviderName === "Alaska Airlines") {
+                else if(response.tripset[10].cheapestProviderName === "Alaska Airlines") {
                     $("#img2").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/AS.png")
                 }
-                else if(response.tripset[1].cheapestProviderName === "United Airlines") {
+                else if(response.tripset[10].cheapestProviderName === "United Airlines") {
                     $("#img2").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/UA.png")
                 }
-                else if(response.tripset[1].cheapestProviderName === "American Airlines") {
+                else if(response.tripset[10].cheapestProviderName === "American Airlines") {
                     $("#img2").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/AA.png")
                 }
-                else if(response.tripset[1].cheapestProviderName === "Spirit Airlines") {
+                else if(response.tripset[10].cheapestProviderName === "Spirit Airlines") {
                     $("#img2").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/NK.png")
                 }
-                else if(response.tripset[1].cheapestProviderName === "Frontier") {
+                else if(response.tripset[10].cheapestProviderName === "Frontier") {
                     $("#img2").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/F9.png")
                 }
-                else if(response.tripset[1].cheapestProviderName === "Southwest") {
+                else if(response.tripset[10].cheapestProviderName === "Southwest") {
                     $("#img2").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/WN.png")
                 }
-                else if(response.tripset[1].cheapestProviderName === "JetBlue") {
+                else if(response.tripset[10].cheapestProviderName === "JetBlue") {
                     $("#img2").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/B6.png")
                 }
                 else {
                     $("#img2").attr('src',"")
                 }
-                $("#link2").attr('href', "https://www.kayak.com/"+response.tripset[1].shareURL);
+                $("#link2").attr('href', "https://www.kayak.com/"+response.tripset[10].shareURL);
 
-                $(".trip3").text("Trip 3: "+ response.tripset[2].cheapestProviderName + " " + response.tripset[2].displayLow);
+                $(".trip3").text("Trip 3: "+ response.tripset[20].cheapestProviderName + " " + response.tripset[20].displayLow);
 
-                if(response.tripset[2].cheapestProviderName === "Delta") {
+                if(response.tripset[20].cheapestProviderName === "Delta") {
                     $("#img3").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/DL.png")
                 }
-                else if(response.tripset[2].cheapestProviderName === "Alaska Airlines") {
+                else if(response.tripset[20].cheapestProviderName === "Alaska Airlines") {
                     $("#img3").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/AS.png")
 
                 }
-                else if(response.tripset[2].cheapestProviderName === "United Airlines") {
+                else if(response.tripset[20].cheapestProviderName === "United Airlines") {
                     $("#img3").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/UA.png")
 
                 }
-                else if(response.tripset[2].cheapestProviderName === "American Airlines") {
+                else if(response.tripset[20].cheapestProviderName === "American Airlines") {
                     $("#img3").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/AA.png")
 
                 }
-                else if(response.tripset[2].cheapestProviderName === "Spirit Airlines") {
+                else if(response.tripset[20].cheapestProviderName === "Spirit Airlines") {
                     $("#img3").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/NK.png")
 
                 }
-                else if(response.tripset[2].cheapestProviderName === "Frontier") {
+                else if(response.tripset[20].cheapestProviderName === "Frontier") {
                     $("#img3").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/F9.png")
 
                 }
-                else if(response.tripset[2].cheapestProviderName === "Southwest") {
+                else if(response.tripset[20].cheapestProviderName === "Southwest") {
                     $("#img3").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/WN.png")
 
                 }
-                else if(response.tripset[2].cheapestProviderName === "JetBlue") {
+                else if(response.tripset[20].cheapestProviderName === "JetBlue") {
                     $("#img3").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/B6.png")
 
                 }
                 else {
                     $("#img3").attr('src',"")
                 }
-                $("#link3").attr('href', "https://www.kayak.com/"+response.tripset[2].shareURL);
+                $("#link3").attr('href', "https://www.kayak.com/"+response.tripset[20].shareURL);
 
-                $(".trip4").text("Trip 4: "+ response.tripset[3].cheapestProviderName + " " + response.tripset[3].displayLow);
+                $(".trip4").text("Trip 4: "+ response.tripset[30].cheapestProviderName + " " + response.tripset[30].displayLow);
 
-                if(response.tripset[3].cheapestProviderName === "Delta") {
+                if(response.tripset[30].cheapestProviderName === "Delta") {
                     $("#img4").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/DL.png")
                 }
-                else if(response.tripset[3].cheapestProviderName === "Alaska Airlines") {
+                else if(response.tripset[30].cheapestProviderName === "Alaska Airlines") {
                     $("#img4").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/AS.png")
 
                 }
-                else if(response.tripset[3].cheapestProviderName === "United Airlines") {
+                else if(response.tripset[30].cheapestProviderName === "United Airlines") {
                     $("#img4").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/UA.png")
                 }
-                else if(response.tripset[3].cheapestProviderName === "American Airlines") {
+                else if(response.tripset[30].cheapestProviderName === "American Airlines") {
                     $("#img4").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/AA.png")
                 }
-                else if(response.tripset[3].cheapestProviderName === "Spirit Airlines") {
+                else if(response.tripset[30].cheapestProviderName === "Spirit Airlines") {
                     $("#img4").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/NK.png")
                 }
-                else if(response.tripset[3].cheapestProviderName === "Frontier") {
+                else if(response.tripset[30].cheapestProviderName === "Frontier") {
                     $("#img4").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/F9.png")
                 }
-                else if(response.tripset[3].cheapestProviderName === "Southwest") {
+                else if(response.tripset[30].cheapestProviderName === "Southwest") {
                     $("#img4").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/WN.png")
                 }
-                else if(response.tripset[3].cheapestProviderName === "JetBlue") {
+                else if(response.tripset[30].cheapestProviderName === "JetBlue") {
                     $("#img4").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/B6.png")
                 }
                 else {
                     $("#img4").attr('src',"")
                 }
-                $("#link4").attr('href', "https://www.kayak.com/"+response.tripset[3].shareURL);
+                $("#link4").attr('href', "https://www.kayak.com/"+response.tripset[30].shareURL);
 
-                $(".trip5").text("Trip 5: "+ response.tripset[4].cheapestProviderName + " " + response.tripset[4].displayLow);
+                $(".trip5").text("Trip 5: "+ response.tripset[40].cheapestProviderName + " " + response.tripset[40].displayLow);
                 
-                if(response.tripset[4].cheapestProviderName === "Delta") {
+                if(response.tripset[40].cheapestProviderName === "Delta") {
                     $("#img5").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/DL.png")
                 }
-                else if(response.tripset[4].cheapestProviderName === "Alaska Airlines") {
+                else if(response.tripset[40].cheapestProviderName === "Alaska Airlines") {
                     $("#img5").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/AS.png")
                 }
-                else if(response.tripset[4].cheapestProviderName === "United Airlines") {
+                else if(response.tripset[40].cheapestProviderName === "United Airlines") {
                     $("#img5").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/UA.png")
                 }
-                else if(response.tripset[4].cheapestProviderName === "American Airlines") {
+                else if(response.tripset[40].cheapestProviderName === "American Airlines") {
                     $("#img5").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/AA.png")
                 }
-                else if(response.tripset[4].cheapestProviderName === "Spirit Airlines") {
+                else if(response.tripset[40].cheapestProviderName === "Spirit Airlines") {
                     $("#img5").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/NK.png")
                 }
-                else if(response.tripset[4].cheapestProviderName === "Frontier") {
+                else if(response.tripset[40].cheapestProviderName === "Frontier") {
                     $("#img5").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/F9.png")
                 }
-                else if(response.tripset[4].cheapestProviderName === "Southwest") {
+                else if(response.tripset[40].cheapestProviderName === "Southwest") {
                     $("#img5").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/WN.png")
                 }
-                else if(response.tripset[4].cheapestProviderName === "JetBlue") {
+                else if(response.tripset[40].cheapestProviderName === "JetBlue") {
                     $("#img5").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/B6.png")
                 }
                 else {
                     $("#img5").attr('src',"")
                 }
-                $("#link5").attr('href', "https://www.kayak.com/"+response.tripset[4].shareURL);
+                $("#link5").attr('href', "https://www.kayak.com/"+response.tripset[40].shareURL);
 
                 $(".trip6").text("Trip 6: "+ response.tripset[5].cheapestProviderName + " " + response.tripset[5].displayLow);
               
@@ -233,7 +247,10 @@ $("#find-flight").on("click", function (event) {
                 $("#link6").attr('href', "https://www.kayak.com/"+response.tripset[5].shareURL);
 
                 // console.log(response.tripset[0]);
+                
             });
-            
+
         });
+            
+      
     
