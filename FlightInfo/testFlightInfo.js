@@ -1,18 +1,19 @@
 $("#find-flight").on("click", function (event) {
 
     event.preventDefault();
-
+    $(".parallax-container").show();
+    $("#container").show();
+   
     var flightFrom = $("#flight-input1").val();            
     var flightTo = $("#flight-input2").val();
     var flightDateFrom = $("#flight-dateInput1").val();
     var flightDateTo = $("#flight-dateInput2").val();
+    var numberOfPpl = $("#numberOfPpl").val();
 
-    var cabinClass = $("#cabin-input1").val().toLowerCase().charAt(0);
-    var cabinClass = $("#cabin-input2").val().toLowerCase().charAt(0);
-    var cabinClass = $("#cabin-input3").val().toLowerCase().charAt(0);
-    var cabinClass = $("#cabin-input4").val().toLowerCase().charAt(0);
+    var cabinClass = $("#cabin-class").val().toLowerCase().charAt(0);
+    
 
-    var queryURL ="https://apidojo-kayak-v1.p.rapidapi.com/flights/create-session?origin1="+flightFrom+"&destination1="+flightTo+"&departdate1="+flightDateFrom+"&cabin="+cabinClass+"&currency=USD&adults=1&bags=0";
+    var queryURL ="https://apidojo-kayak-v1.p.rapidapi.com/flights/create-session?origin1="+flightFrom+"&destination1="+flightTo+"&departdate1="+flightDateFrom+"&cabin="+cabinClass+"&currency=USD&adults="+numberOfPpl+"&bags=0";
         
         $.ajax({
             url: queryURL,                    
@@ -233,4 +234,6 @@ $("#find-flight").on("click", function (event) {
 
                 // console.log(response.tripset[0]);
             });
-});
+            
+        });
+    

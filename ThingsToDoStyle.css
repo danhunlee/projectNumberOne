@@ -81,3 +81,6 @@ margin-right: 10px;
 .checked{
     color:orange;
 }
+#container {
+    display: none;
+}
