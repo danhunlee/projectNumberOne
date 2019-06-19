@@ -85,14 +85,10 @@ margin-right: 10px;
     display: none;
 }
 
-.loading {
+#loading {
     display: block;
     background: url(spinner.gif) no-repeat center middle;
     width: 124px;
     height: 124px;
     margin: 0 auto;
 }
-/* Hide all the children of the 'loading' element */
-/* .loading * {
-    display: none;  
-} */

@@ -1,9 +1,20 @@
+$('#loading').hide();
+    $(document).ajaxStart(function() {                    
+        $("#loading").show();
+        $("#container").hide();
+
+    });
+    $(document).ajaxStop(function() {
+        $("#loading").hide();
+        $("#container").show();
+
+    });
+
 $("#find-flight").on("click", function (event) {
 
     event.preventDefault();
     $(".parallax-container").show();
-    $("#container").show();
-   
+    
     var flightFrom = $("#flight-input1").val();            
     var flightTo = $("#flight-input2").val();
     var flightDateFrom = $("#flight-dateInput1").val();
@@ -236,14 +247,10 @@ $("#find-flight").on("click", function (event) {
                 $("#link6").attr('href', "https://www.kayak.com/"+response.tripset[5].shareURL);
 
                 // console.log(response.tripset[0]);
+                
             });
-            $(document).ajaxStart(function() {
-                $(".loading").show();
-              });
-              
-              $(document).ajaxStop(function() {
-                $(".loading").hide();
-              });
-            
+
         });
+            
+      
     
