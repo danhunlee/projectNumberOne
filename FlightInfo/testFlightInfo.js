@@ -66,6 +66,7 @@ $("#find-flight").on("click", function (event) {
                 else {
                     $("#img1").attr('src',"")
                 }
+                $("#link1").attr('href', "https://www.kayak.com/"+response.tripset[0].shareURL);
                 
                 $(".trip2").text("Trip 2: "+ response.tripset[1].cheapestProviderName + " " + response.tripset[1].displayLow);
 
@@ -96,7 +97,8 @@ $("#find-flight").on("click", function (event) {
                 else {
                     $("#img2").attr('src',"")
                 }
-                
+                $("#link2").attr('href', "https://www.kayak.com/"+response.tripset[1].shareURL);
+
                 $(".trip3").text("Trip 3: "+ response.tripset[2].cheapestProviderName + " " + response.tripset[2].displayLow);
 
                 if(response.tripset[2].cheapestProviderName === "Delta") {
@@ -133,7 +135,8 @@ $("#find-flight").on("click", function (event) {
                 else {
                     $("#img3").attr('src',"")
                 }
-                
+                $("#link3").attr('href', "https://www.kayak.com/"+response.tripset[2].shareURL);
+
                 $(".trip4").text("Trip 4: "+ response.tripset[3].cheapestProviderName + " " + response.tripset[3].displayLow);
 
                 if(response.tripset[3].cheapestProviderName === "Delta") {
@@ -164,6 +167,7 @@ $("#find-flight").on("click", function (event) {
                 else {
                     $("#img4").attr('src',"")
                 }
+                $("#link4").attr('href', "https://www.kayak.com/"+response.tripset[3].shareURL);
 
                 $(".trip5").text("Trip 5: "+ response.tripset[4].cheapestProviderName + " " + response.tripset[4].displayLow);
                 
@@ -194,6 +198,7 @@ $("#find-flight").on("click", function (event) {
                 else {
                     $("#img5").attr('src',"")
                 }
+                $("#link5").attr('href', "https://www.kayak.com/"+response.tripset[4].shareURL);
 
                 $(".trip6").text("Trip 6: "+ response.tripset[5].cheapestProviderName + " " + response.tripset[5].displayLow);
               
@@ -224,6 +229,8 @@ $("#find-flight").on("click", function (event) {
                 else {
                     $("#img6").attr('src',"")
                 }
+                $("#link6").attr('href', "https://www.kayak.com/"+response.tripset[5].shareURL);
+
                 // console.log(response.tripset[0]);
             });
 });
