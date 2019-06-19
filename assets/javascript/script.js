@@ -53,6 +53,7 @@ $('#search').on('click',function(){
         $('#visit6').text("Visit Here");
 
         $('#addlin11').text(response.response.groups[0].items[0].venue.location.formattedAddress[0]);
+        console.log(response.response.groups[0].items[0].venue.location.formattedAddress[1]);
         $('#addlin12').text(response.response.groups[0].items[0].venue.location.formattedAddress[1]);
         $('#addlin21').text(response.response.groups[0].items[1].venue.location.formattedAddress[0]);
         $('#addlin22').text(response.response.groups[0].items[1].venue.location.formattedAddress[1]);
@@ -64,6 +65,9 @@ $('#search').on('click',function(){
         $('#addlin52').text(response.response.groups[0].items[4].venue.location.formattedAddress[1]);
         $('#addlin61').text(response.response.groups[0].items[5].venue.location.formattedAddress[0]);
         $('#addlin62').text(response.response.groups[0].items[5].venue.location.formattedAddress[1]);
+
+        
+
 
        
 
@@ -375,6 +379,23 @@ $('#Things-to-do-btn').on('click',function(){
         $('#visit4').text("Visit Here");
         $('#visit5').text("Visit Here");
         $('#visit6').text("Visit Here");
+
+
+        $('#addlin11').text(response.response.groups[0].items[0].venue.location.formattedAddress[0]);
+        $('#addlin12').text(response.response.groups[0].items[0].venue.location.formattedAddress[1]);
+        $('#addlin21').text(response.response.groups[0].items[1].venue.location.formattedAddress[0]);
+        $('#addlin22').text(response.response.groups[0].items[1].venue.location.formattedAddress[1]);
+        $('#addlin31').text(response.response.groups[0].items[2].venue.location.formattedAddress[0]);
+        $('#addlin32').text(response.response.groups[0].items[2].venue.location.formattedAddress[1]);
+        $('#addlin41').text(response.response.groups[0].items[3].venue.location.formattedAddress[0]);
+        $('#addlin42').text(response.response.groups[0].items[3].venue.location.formattedAddress[1]);
+        $('#addlin51').text(response.response.groups[0].items[4].venue.location.formattedAddress[0]);
+        $('#addlin52').text(response.response.groups[0].items[4].venue.location.formattedAddress[1]);
+        $('#addlin61').text(response.response.groups[0].items[5].venue.location.formattedAddress[0]);
+        $('#addlin62').text(response.response.groups[0].items[5].venue.location.formattedAddress[1]);
+
+       
+
        
 
 
@@ -505,6 +526,24 @@ $('#activity-btn').on('click',function(){
         $('#visit4').text("Visit Here");
         $('#visit5').text("Visit Here");
         $('#visit6').text("Visit Here");
+
+
+
+        $('#addlin11').text(response.response.groups[0].items[0].venue.location.formattedAddress[0]);
+        $('#addlin12').text(response.response.groups[0].items[0].venue.location.formattedAddress[1]);
+        $('#addlin21').text(response.response.groups[0].items[1].venue.location.formattedAddress[0]);
+        $('#addlin22').text(response.response.groups[0].items[1].venue.location.formattedAddress[1]);
+        $('#addlin31').text(response.response.groups[0].items[2].venue.location.formattedAddress[0]);
+        $('#addlin32').text(response.response.groups[0].items[2].venue.location.formattedAddress[1]);
+        $('#addlin41').text(response.response.groups[0].items[3].venue.location.formattedAddress[0]);
+        $('#addlin42').text(response.response.groups[0].items[3].venue.location.formattedAddress[1]);
+        $('#addlin51').text(response.response.groups[0].items[4].venue.location.formattedAddress[0]);
+        $('#addlin52').text(response.response.groups[0].items[4].venue.location.formattedAddress[1]);
+        $('#addlin61').text(response.response.groups[0].items[5].venue.location.formattedAddress[0]);
+        $('#addlin62').text(response.response.groups[0].items[5].venue.location.formattedAddress[1]);
+
+       
+
        
 
         var queryURL2 = "https://api.foursquare.com/v2/venues/"+response.response.groups[0].items[0].venue.id+"/photos?&client_id="+client_id+"&client_secret="+client_secret+"&v=20130307";

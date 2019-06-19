@@ -1,6 +1,13 @@
+var city="";
 $('document').ready(function(){
     console.log("loaded");
-    var myurl = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?categories=hotels&location=new+york&limit=50";
+
+    $('#search').on('click',function(){
+        city=$('#autocomplete-input').val();
+        console.log(city);
+    })
+
+    var myurl = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?categories=hotels&location=seattle&limit=50";
 
          $.ajax({
             url: myurl,
