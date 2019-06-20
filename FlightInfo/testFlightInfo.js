@@ -36,7 +36,8 @@ $("#find-flight").on("click", function (event) {
 
                 $(".Depart").text("Depart: " + flightFrom + " " + flightDateFrom);
                 $(".Return").text("Return: "+ flightTo + " " + flightDateTo);
-                
+                $(".number").text("Number of passengers: "+ numberOfPpl);
+
                 if(cabinClass === "e") {
                     $(".ClassIs").text("Class: Economy");
                 }
