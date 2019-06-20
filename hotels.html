@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <!--ThingsToDostyle-->
+     <link rel="stylesheet" href="ThingsToDoStyle.css">
+     <!--font awesom cdn-->
+     <script src="https://kit.fontawesome.com/d9f55774e6.js"></script>
+     <link rel=”stylesheet” type=”text/css” href=”star-rating-svg-master/src/css/star-rating-svg.css”>
+     <script src="star-rating-svg-master/src/jquery.star-rating-svg.js"></script>  
+     
+    
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+<body>
+<!--navbar-->
+<nav>
+        <div class="nav-wrapper white black-text">
+          <a href="1index.html" class="brand-logo left black-text">Backpacker
+            <img src="img/travel-logo-design.jpg">
+          </a>
+          
+       
+        
+          <ul class="right hide-on-med-and-down black-text" id="nav_content">
+              <li ><a href="1index.html">Home</a></li>
+
+            <li ><a href="transportation.html">Transportation</a></li>
+            <li><a href="hotels.html">Hotel</a></li>
+            <li class="active black-text"><a href="ThingsToDo.html">Things to Do</a></li>
+    
+            <li>    
+              
+                  
+                     <div class="input-field col s6 s12 red-text right"  id="topbarsearch" style="margin-left: 150px">
+                       <i class="red-text material-icons prefix" id="search">search</i>
+                       <input type="text" placeholder="search" id="autocomplete-input" class="autocomplete red-text" >
+                       </div>
+                     
+                            
+             </li>         
+            
+          </ul>
+        </div>
+      </nav>
+<!--slider-->
+<div class="slider">
+        <ul class="slides">
+          <li>
+            <img src="img/hotel2.jpeg"> <!-- random image -->
+            <div class="caption center-align black-text " id="calender">
+                
+               <!--date picker-->
+               <div class="row" >
+                <!--Things to do in location-->
+                <div class="col s12 m12 l12  yellow-text">
+                  <h4>“For Lifestyle Travelers!”</h4>  </div>
+                
+              </div>
+              
+                  
+                  
+              <h5 class="white-text">Choose right option!</h5>
+            </div>
+          </li>
+          <li>
+            <img src="img/hotel1.jpeg"> <!-- random image -->
+            <div class="caption left-align white-text">
+              <h3>Check into another world.</h3>
+              <h5 class="white-text">Feel the class</h5>
+            </div>
+          </li>
+          <li>
+            <img src="img/hotel5.jpeg"> <!-- random image -->
+            <div class="caption right-align">
+              <h3>Hotel Hours For Resting!</h3>
+              <h5 class="light grey-text text-lighten-3">Find Best Deals!!!</h5>
+            </div>
+          </li>
+          <li>
+            <img src="img/hotel4.jpg"> <!-- random image -->
+            <div class="caption center-align">
+              <h3>Travel brilliantly.!</h3>
+              <h5 class="light grey-text text-lighten-3">Make right choice ..</h5>
+            </div>
+          </li>
+        </ul>
+      </div>
+<!--pagination-->
+<ul class="pagination">
+        <li class="disabled"><a href=><i class="material-icons">chevron_left</i></a></li>
+        <li class="active"><a href="hotels.html">1</a></li>
+        <li class="waves-effect"><a id="page2" href="hotels_page1.html">2</a></li>
+        <li class="waves-effect"><a href="hotels_page2.html">3</a></li>
+        <li class="waves-effect"><a href="hotels_page3.html">4</a></li>
+        <li class="waves-effect"><a href="hotels_page4.html">5</a></li>
+        <li class="waves-effect"><a href="hotels_page1.html"><i class="material-icons">chevron_right</i></a></li>
+      </ul>
+         
+<!-- first image card row1-->
+<div class="container-fluid ">
+    <div class="row">
+        <div class="col l6 ">
+            <div class="col s12 m7">
+                 <div class="card horizontal sticky-action" style="width: 600px">
+                    <div class="card-image">
+                        <img src="img/hotel2.jpeg" style="width: 300px;height:300px" id="img1">
+                        <span class="card-title" id="image-title1">Golden Cave</span>
+                    </div>
+                    <div class="card-stacked">
+                        <!--card content-->
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="col">
+                                    <h8 id="Price1"> Price: </h8>
+                                    <i class="fas"></i>
+                                   
+                                </div>
+                           </div>
+                     
+                            <div class="row">
+                                <div class="col">
+                                    <h8 > Rating</h8> 
+                                   <div id="rating"></div>
+                                   <span class="fa fa-star checked" id="star1"></span>
+                                   <span class="fa fa-star checked" id="star1"></span>
+                                   <span class="fa fa-star checked" id="star1"></span>
+                                   <span class="fa fa-star" id="star1"></span>
+                                   <span class="fa fa-star" id="star1"></span> 
+                                </div>
+                           </div>
+                    </div>
+                    <div class="card-action">   
+                        <i class="fas fa-address-card">  Address</i>
+                        <P id="Address1">535 pontius ave N <br>setattle Washington</P>
+
+                    </div>
+                </div>
+                    
+                   
+                      
+                  
+                </div>
+              </div>
+              </div>
+                        
+          
+    
+<!--second card image row1-->
+<div class="col l6 ">
+<div class="col s12 m7">
+        
+        <div class="card horizontal" style="width: 600px">
+          <div class="card-image">
+            <img src="img/hotel3.jpeg" style="width: 300px;height:300px" id="img2">
+            <span class="card-title" id="image-title2">Golden Cave</span>
+            
+              
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+                    <div class="row">
+                                <div class="col">
+                                    <h8 id="Price2"> Price: </h8>
+                                    <i class="fas "></i>
+                                   
+                                </div>
+                    </div>
+                 
+                        <div class="row">
+                            
+                            <div class="col">
+                            <h8 id="rating"> Rating</h8> 
+                            <span class="fa fa-star checked" id="star2"></span>
+                            <span class="fa fa-star checked" id="star2"></span>
+                            <span class="fa fa-star checked" id="star2"></span>
+                            <span class="fa fa-star" id="star2"></span>
+                            <span class="fa fa-star" id="star2"></span> 
+                               
+                          </div>
+                       </div>
+            </div>
+            <div class="card-action">
+              <i class="fas fa-address-card">  Address</i>
+              <P id="Address2">535 pontius ave N <br>setattle Washington<br>bla bla blaaa</P>
+
+            </div>
+          </div>
+        </div>
+      </div>
+                
+    </div>
+    </div>
+<!--image card row2 col1-->
+<div class="row">
+        <div class="col l6 ">
+           <div class="col s12 m7">
+                
+                <div class="card horizontal" style="width: 600px">
+                  <div class="card-image">
+                    <img src="img/hotel1.jpeg" style="width: 300px;height:300px" id="img3">
+                    <span class="card-title" id="image-title3">Golden Cave</span>
+                    
+                      
+                  </div>
+                  <div class="card-stacked">
+                    <div class="card-content">
+                            <div class="row">
+                                    <div class="col">
+                                      <h8 id="Price3"> Price: </h8>
+                                      <i class="fas "></i>
+                                     
+                                    </div>
+                               </div>
+                         
+                                <div class="row">
+                                    <div class="col">
+                                        <h8 id="rating"> Rating</h8> 
+                                        <span class="fa fa-star checked" id="star3"></span>
+                                        <span class="fa fa-star checked" id="star3"></span>
+                                        <span class="fa fa-star checked" id="star3"></span>
+                                        <span class="fa fa-star" id="star3"></span>
+                                        <span class="fa fa-star" id="star3"></span> 
+                                    </div>
+                               </div>
+    
+                    </div>
+                    <div class="card-action">
+                      <i class="fas fa-address-card">  Address</i>
+                      <P id="Address3">535 pontius ave N <br>setattle Washington<br>bla bla blaaa</P>
+        
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+                        
+       
+              
+<!--second row card image col2-->
+<div class="col l6">
+    <div class="col s12 m7">
+        <div class="card horizontal" style="width: 600px">
+            <div class="card-image">
+                <img src="img/hotel2.jpeg" style="width: 300px;height:300px" id="img4">
+                    <span class="card-title" id="image-title4">Golden Cave</span>
+                    
+                      
+                  </div>
+                  <div class="card-stacked">
+                    <div class="card-content">
+                            <div class="row">
+                                    <div class="col">
+                                      <h8 id="Price4"> Price: </h8>
+                                      <i class="fas "></i>
+                                    </div>
+                               </div>
+                         
+                                <div class="row">
+                                    <div class="col">
+                                      <h8 id="rating"> Rating</h8> 
+                                      <span class="fa fa-star checked" id="star4"></span>
+                                      <span class="fa fa-star checked" id="star4"></span>
+                                      <span class="fa fa-star checked" id="star4"></span>
+                                      <span class="fa fa-star" id="star4"></span>
+                                      <span class="fa fa-star" id="star4"></span> 
+                                    </div>
+                               </div>
+    
+                    </div>
+                    <div class="card-action">
+                      <i class="fas fa-address-card">  Address</i>
+                      <P id="Address4">535 pontius ave N <br>setattle Washington<br>bla bla blaaa</P>
+        
+                    
+                    </div>
+                  </div>
+                </div>
+              </div>
+                        
+            </div>
+  </div>
+<!--image card row3 col1-->
+<div class="row">
+        <div class="col l6 ">
+           <div class="col s12 m7">
+                
+                <div class="card horizontal" style="width: 600px">
+                  <div class="card-image">
+                    <img src="img/hotel3.jpeg" style="width: 300px;height:300px" id="img5">
+                    <span class="card-title" id="image-title5">Golden Cave</span>
+                    
+                      
+                  </div>
+                  <div class="card-stacked">
+                    <div class="card-content">
+                            <div class="row">
+                                    <div class="col">
+                                      <h8 id="Price5"> Price: </h8>
+                                      <i class="fas "></i>
+                                    </div>
+                               </div>
+                         
+                                <div class="row">
+                                    <div class="col">
+                                      <h8 id="rating"> Rating</h8> 
+                                      <span class="fa fa-star checked" id="star5"></span>
+                                      <span class="fa fa-star checked" id="star5"></span>
+                                      <span class="fa fa-star checked" id="star5"></span>
+                                      <span class="fa fa-star" id="star5"></span>
+                                      <span class="fa fa-star" id="star5"></span>  
+                                    </div>
+                               </div>
+    
+                    </div>
+                    <div class="card-action">
+                      <i class="fas fa-address-card">  Address</i>
+                      <P id="Address5">535 pontius ave N <br>setattle Washington<br>bla bla blaaa</P>
+        
+                    
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+<!--image card row3 col3-->
+<div class="col l6">
+        <div class="col s12 m7">
+                
+                <div class="card horizontal" style="width: 600px">
+                  <div class="card-image">
+                    <img src="img/hotel5.jpeg" style="width: 300px;height:300px" id="img6">
+                    <span class="card-title" id="image-title6">Golden Cave</span>
+                    
+                      
+                  </div>
+                  <div class="card-stacked">
+                    <div class="card-content">
+                            <div class="row">
+                                    <div class="col">
+                                      <h8 id="Price6"> Price: </h8>
+                                      <i class="fas "></i>
+                                    </div>
+                               </div>
+                         
+                                <div class="row">
+                                    <div class="col">
+                                      <h8 id="rating"> Rating</h8> 
+                                      <span class="fa fa-star checked" id="star6"></span>
+                                      <span class="fa fa-star checked" id="star6"></span>
+                                      <span class="fa fa-star checked" id="star6"></span>
+                                      <span class="fa fa-star" id="star6"></span>
+                                      <span class="fa fa-star" id="star6"></span> 
+                                    </div>
+                               </div>
+    
+                    </div>
+                    <div class="card-action">
+                      <i class="fas fa-address-card">  Address</i>
+                      <P id="Address6">535 pontius ave N <br>setattle Washington<br>bla bla blaaa</P>
+        
+                    
+                    </div>
+                  </div>
+                </div>
+              </div>
+                        
+            </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script src="assets/javascript/scriptHotel.js"></script>
+
+<script>
+ //slider 
+ $(document).ready(function(){
+    $('.slider').slider();
+  });
+      
+    //when click things to do image card images,get full view of image
+ const Gallery=document.querySelectorAll('.materialboxed');
+ M.Materialbox.init(Gallery,{});
+  </script>
+</body>
+</html>
+

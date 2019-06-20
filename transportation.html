@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--font awesom cdn-->
+  <script src="https://kit.fontawesome.com/d9f55774e6.js"></script>
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!--ThingsToDo,transportation style-->
+  <link rel="stylesheet" href="ThingsToDoStyle.css">
+  <!--JQUERY LINK-->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body id="transportation">
+
+  <nav>
+    <div class="nav-wrapper white black-text">
+      <a href="#!" class="brand-logo left black-text">Backpacker
+        <img src="img/travel-logo-design.jpg">
+      </a>
+      <ul class="right hide-on-med-and-down black-text" id="nav_content">
+          <li><a href="1index.html">Home</a></li>
+
+        <li><a href="transportation.html">Transportation</a></li>
+        <li><a href="hotels.html">Hotel</a></li>
+        <li class="active black-text"><a href="ThingsToDo.html">Things to Do</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!--background image -->
+  <div class="parallax-container">
+    <!--flight infobox-->
+    <div class="container black center " id="flight-check">
+
+      <!--nav for small box-->
+
+      <nav>
+        <div class="nav-wrapper  white ">
+          <a href="#" class="brand-logo center black-text ">Find The Best Flight </a>
+
+          <!--find flight BUTTON-->
+          <!-- This button will trigger our AJAX call -->
+          <input class="waves-effect waves-light btn teal right" id="find-flight" type="submit" value="Find">
+
+
+        </div>
+      </nav>
+
+      <!--input transportation details-->
+      <div class="row">
+        <div class="col s12 m6 l6">
+          <div class="row white" id="travel-info-input-row">
+            <div class="input-field col s5">
+              <!--input FROM:-->
+              <input type="text" id="flight-input1" class="autocomplete">
+
+              <label for="autocomplete-input" class="black-text">From :
+                <i class="material-icons left black-text">place</i>
+              </label>
+            </div>
+            <div class="input-field col s5">
+              <!--input TO::-->
+              <input type="text" id="flight-input2" class="autocomplete">
+              <label for="autocomplete-input" class="black-text">To :
+                <i class="material-icons left black-text">place</i>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!--calendar-->
+        <div class="col l6 m6 s12">
+          <div class="row white" id="Depart-info-input-row">
+            <div class=" input-field col l5 m6 s6 black-text ">
+              
+              <label for="autocomplete-input"  class="left black-text">Depart :
+                <i class="far fa-calendar-alt"></i>
+                <i class="fas fa-plane-departure "></i>
+              </label>
+              <!--input Depart::-->
+              <input type="text" id="flight-dateInput1" class="datepicker">
+            </div>
+            
+            <div class=" input-field col l6 m6 s6 black-text ">
+              <label for="autocomplete-input"  class="left black-text">Return :
+                <i class="far fa-calendar-alt"></i>
+                <i class="fas fa-plane-arrival"></i>
+              </label>
+              <!--input Return::-->
+              <input type="text" id="flight-dateInput2" class="datepicker">
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col l5 m6 s12  white " style="margin-right: 55px;margin-left:30px">
+          <!--drop down to know persons,economy/bussiness class-->
+
+          <div class="input-field col l5 m6 s12  ">
+            <select id="cabin-class">
+              <option value="" disabled selected>Choose</option>
+              <!-- <input type="text" id="cabin-input"> -->
+              <option value="e">Economy</option>
+              <option value="p">Premium Economy</option>
+              <option value="b">Business</option>
+              <option value="f">First</option>
+            </select>
+            <label class="black text">Choose a class
+              <i class="fas fa-plane"></i>
+            </label>
+
+          </div>
+
+        </div>
+
+
+        <!--number of travelers-->
+
+        <div class="col l5 m6 s12 white " style="margin-left:20px; margin-right:10px;" >
+          <!--drop down to know persons,economy/bussiness class-->
+
+          <div class="input-field col l6 m6 s12">
+            <select id="number of people">
+              <option value="" disabled selected>Choose</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <!-- <option value="other"></option> -->
+            </select>
+            <label class="black text">Person
+
+              <i class="fas fa-users"></i>
+            </label>
+
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  
+
+  <br>
+    <div id="loading">
+        <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue-only">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+  <div id="container">
+
+    <h3 class="center red-text">Find Great Deals!!!!!!!</h3>
+    <div class="row">
+
+      <div class="col l12 m6 s12">
+        <div class="card">
+          <div class="Depart"></div>
+          <div class="Return"></div>
+          <div class="ClassIs"></div>
+        </div>
+      </div>
+    </div>
+
+
+  <div class="row">
+
+    <div class="col l6 m6 s12">
+      <div class="card">
+        <div class="card-content" id="flight-description">
+          <img id="img1">
+          <div class="trip1"></div>
+          <br>
+          <div class="info">For more information: </div>
+          <br>
+          <a class="btn btn-primary" id="link1" href="" target="_blank" role="button">Select</a>
+
+        </div>
+      </div>
+    </div>
+    <div class="col l6 m6 s12">
+      <div class="card">
+        <div class="card-content" id="flight-description">
+          <img id="img2">
+
+          <div class="trip2"></div>
+          <br>
+          <div class="info">For more information: </div>
+          <br>
+          <a class="btn btn-primary" id="link2" href="" target="_blank" role="button">Select</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+  <div class="row">
+
+    <div class="col l6 m6 s12">
+      <div class="card">
+        <div class="card-content" id="flight-description">
+          <img id="img3">
+
+          <div class="trip3"></div>
+          <br>
+          <div class="info">For more information: </div>
+          <br>
+          <a class="btn btn-primary" id="link3" href="" target="_blank" role="button">Select</a>
+
+        </div>
+      </div>
+    </div>
+    <div class="col l6 m6 s12">
+      <div class="card">
+        <div class="card-content" id="flight-description">
+          <img id="img4">
+
+          <div class="trip4"></div>
+          <br>
+          <div class="info">For more information: </div>
+          <br>
+          <a class="btn btn-primary" id="link4" href="" target="_blank" role="button">Select</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+
+    <div class="col l6 m6 s12">
+      <div class="card">
+        <div class="card-content" id="flight-description">
+          <img id="img5">
+
+          <div class="trip5"></div>
+          <br>
+          <div class="info">For more information: </div>
+          <br>
+          <a class="btn btn-primary" id="link5" href="" target="_blank" role="button">Select</a>
+
+        </div>
+      </div>
+    </div>
+    <div class="col l6 m6 s12">
+      <div class="card">
+        <div class="card-content" id="flight-description">
+          <img id="img6">
+
+          <div class="trip6"></div>
+          <br>
+          <div class="info">For more information: </div>
+          <br>
+          <a class="btn btn-primary" id="link6" href="" target="_blank" role="button">Select</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="../projectNumberOne/FlightInfo/testFlightInfo.js"></script>
+  <script>
+    //background image initialize
+
+    var elems = document.querySelector('.parallax');
+    var instances = M.Parallax.init(elems, {});
+
+    //auto complete form
+    var form = document.querySelectorAll('.autocomplete');
+    var instances = M.Autocomplete.init(form, {
+      data: {
+        " Alaska": null,
+        "Arizona": null,
+        "California": null,
+        "Colorado": null,
+        "Florida": null,
+        "Georgia": null,
+        "Idaho": null,
+        "Minnesota": null,
+        "Michigan": null,
+        "Virginia": null,
+        "Texas": null,
+        "Wyoming": null,
+        " Washington": null,
+        "Kentucky": null,
+        "New York": null,
+      },
+      limit: 5
+
+
+
+
+    });
+    //date picker
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var calendar = document.querySelectorAll('.datepicker');
+      var instances = M.Datepicker.init(calendar, {
+
+        showClearBtn: true,
+        selectMonths: true,
+        format:'yyyy-mm-dd'
+
+      });
+
+
+      //drop down 
+      var elems = document.querySelectorAll('select');
+      var instances = M.FormSelect.init(elems, {});
+    });
+    
+  </script>
+</body>
+</html>
