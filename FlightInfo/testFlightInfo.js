@@ -33,8 +33,6 @@ $("#find-flight").on("click", function (event) {
             },
             }).then(function (response) {
                 console.log(response);
-                
-                
 
                 $(".Depart").text("Depart: " + flightFrom + " " + flightDateFrom);
                 $(".Return").text("Return: "+ flightTo + " " + flightDateTo);
@@ -52,7 +50,7 @@ $("#find-flight").on("click", function (event) {
                     $(".ClassIs").text("Class: First");
                 }
                 
-                $(".trip1").text("Trip 1: " + response.tripset[0].cheapestProviderName + " " + response.tripset[0].displayLow);
+                $(".trip1").text("Trip 1: " + response.tripset[0].cheapestProviderName + " " + response.tripset[0].displayLowTotal);
                 
                 if(response.tripset[0].cheapestProviderName === "Delta") {
                     $("#img1").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/DL.png")
@@ -83,7 +81,7 @@ $("#find-flight").on("click", function (event) {
                 }
                 $("#link1").attr('href', "https://www.kayak.com/"+response.tripset[0].shareURL);
                 
-                $(".trip2").text("Trip 2: "+ response.tripset[10].cheapestProviderName + " " + response.tripset[10].displayLow);
+                $(".trip2").text("Trip 2: "+ response.tripset[10].cheapestProviderName + " " + response.tripset[10].displayLowTotal);
 
                 if(response.tripset[10].cheapestProviderName === "Delta") {
                     $("#img2").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/DL.png")
@@ -114,7 +112,7 @@ $("#find-flight").on("click", function (event) {
                 }
                 $("#link2").attr('href', "https://www.kayak.com/"+response.tripset[10].shareURL);
 
-                $(".trip3").text("Trip 3: "+ response.tripset[20].cheapestProviderName + " " + response.tripset[20].displayLow);
+                $(".trip3").text("Trip 3: "+ response.tripset[20].cheapestProviderName + " " + response.tripset[20].displayLowTotal);
 
                 if(response.tripset[20].cheapestProviderName === "Delta") {
                     $("#img3").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/DL.png")
@@ -152,7 +150,7 @@ $("#find-flight").on("click", function (event) {
                 }
                 $("#link3").attr('href', "https://www.kayak.com/"+response.tripset[20].shareURL);
 
-                $(".trip4").text("Trip 4: "+ response.tripset[30].cheapestProviderName + " " + response.tripset[30].displayLow);
+                $(".trip4").text("Trip 4: "+ response.tripset[30].cheapestProviderName + " " + response.tripset[30].displayLowTotal);
 
                 if(response.tripset[30].cheapestProviderName === "Delta") {
                     $("#img4").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/DL.png")
@@ -184,7 +182,7 @@ $("#find-flight").on("click", function (event) {
                 }
                 $("#link4").attr('href', "https://www.kayak.com/"+response.tripset[30].shareURL);
 
-                $(".trip5").text("Trip 5: "+ response.tripset[40].cheapestProviderName + " " + response.tripset[40].displayLow);
+                $(".trip5").text("Trip 5: "+ response.tripset[40].cheapestProviderName + " " + response.tripset[40].displayLowTotal);
                 
                 if(response.tripset[40].cheapestProviderName === "Delta") {
                     $("#img5").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/DL.png")
@@ -215,7 +213,7 @@ $("#find-flight").on("click", function (event) {
                 }
                 $("#link5").attr('href', "https://www.kayak.com/"+response.tripset[40].shareURL);
 
-                $(".trip6").text("Trip 6: "+ response.tripset[5].cheapestProviderName + " " + response.tripset[5].displayLow);
+                $(".trip6").text("Trip 6: "+ response.tripset[5].cheapestProviderName + " " + response.tripset[5].displayLowTotal);
               
                 if(response.tripset[5].cheapestProviderName === "Delta") {
                     $("#img6").attr('src',"https://www.gstatic.com/flights/airline_logos/70px/DL.png")
